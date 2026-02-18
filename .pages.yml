@@ -81,6 +81,16 @@ content:
           - { name: right_content, type: code, label: Right Content, options: { language: markdown } }
           - { name: description, type: string, label: Description }
 
+  - name: reviews
+    label: Reviews
+    path: reviews
+    type: collection
+    subfolders: false
+    fields:
+      - { name: name, type: string, label: Name }
+      - { name: url, type: string, label: URL }
+      - { name: body, label: Body, type: code, options: { language: markdown } }
+
   - name: site
     label: Site Configuration
     type: file
