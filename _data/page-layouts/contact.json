@@ -1,0 +1,19 @@
+{
+  "label": "Contact Page",
+  "blocks": [
+    {
+      "type": "hero",
+      "fields": {
+        "full_width": { "type": "boolean", "label": "Full Width" },
+        "title": { "type": "string", "label": "Title", "required": true },
+        "lead": { "type": "string", "label": "Lead Text" }
+      }
+    },
+    {
+      "type": "contact_form",
+      "fields": {
+        "content": { "type": "rich-text", "label": "Content" }
+      }
+    }
+  ]
+}

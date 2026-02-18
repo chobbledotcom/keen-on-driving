@@ -1,5 +1,5 @@
 {
-  "label": "Keen On Driving Page",
+  "label": "Home Page",
   "blocks": [
     {
       "type": "hero",
@@ -24,11 +24,8 @@
     {
       "type": "features",
       "fields": {
-        "section_class": { "type": "string", "label": "Section Class" },
         "header_title": { "type": "string", "label": "Header Title" },
         "header_subtitle": { "type": "string", "label": "Header Subtitle" },
-        "grid_class": { "type": "string", "label": "Grid Class" },
-        "heading_level": { "type": "number", "label": "Heading Level" },
         "items": {
           "type": "object",
           "list": true,
@@ -59,9 +56,7 @@
     {
       "type": "split",
       "fields": {
-        "section_class": { "type": "string", "label": "Section Class" },
         "title": { "type": "string", "label": "Title" },
-        "reverse": { "type": "boolean", "label": "Reverse Layout" },
         "content": { "type": "rich-text", "label": "Content" },
         "button": {
           "type": "object",
@@ -74,43 +69,27 @@
           }
         },
         "figure_type": { "type": "string", "label": "Figure Type (image, video, code, html)" },
-        "figure_src": { "type": "image", "label": "Figure Image" },
-        "figure_alt": { "type": "string", "label": "Figure Alt Text" },
-        "figure_caption": { "type": "string", "label": "Figure Caption" },
         "figure_html": { "type": "rich-text", "label": "Figure HTML Content" }
       }
     },
     {
-      "type": "split-full",
-      "fields": {
-        "full_width": { "type": "boolean", "label": "Full Width" },
-        "variant": { "type": "string", "label": "Variant" },
-        "left_title": { "type": "string", "label": "Left Title" },
-        "left_content": { "type": "rich-text", "label": "Left Content" },
-        "left_button": {
-          "type": "object",
-          "label": "Left Button",
-          "fields": {
-            "text": { "type": "string", "label": "Button Text", "required": true },
-            "href": { "type": "string", "label": "URL", "required": true },
-            "variant": { "type": "string", "label": "Variant" }
-          }
-        },
-        "right_title": { "type": "string", "label": "Right Title" },
-        "right_content": { "type": "rich-text", "label": "Right Content" }
-      }
-    },
-    {
-      "type": "markdown",
+      "type": "features",
       "fields": {
         "section_class": { "type": "string", "label": "Section Class" },
-        "content": { "type": "rich-text", "label": "Content" }
-      }
-    },
-    {
-      "type": "contact_form",
-      "fields": {
-        "content": { "type": "rich-text", "label": "Content" }
+        "header_title": { "type": "string", "label": "Header Title" },
+        "header_subtitle": { "type": "string", "label": "Header Subtitle" },
+        "grid_class": { "type": "string", "label": "Grid Class" },
+        "heading_level": { "type": "number", "label": "Heading Level" },
+        "items": {
+          "type": "object",
+          "list": true,
+          "label": "Features",
+          "fields": {
+            "icon": { "type": "string", "label": "Icon (Iconify ID or HTML entity)" },
+            "title": { "type": "string", "label": "Title", "required": true },
+            "description": { "type": "string", "label": "Description", "required": true }
+          }
+        }
       }
     },
     {

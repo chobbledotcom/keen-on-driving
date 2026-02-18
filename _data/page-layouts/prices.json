@@ -1,0 +1,79 @@
+{
+  "label": "Prices Page",
+  "blocks": [
+    {
+      "type": "hero",
+      "fields": {
+        "full_width": { "type": "boolean", "label": "Full Width" },
+        "title": { "type": "string", "label": "Title", "required": true },
+        "lead": { "type": "string", "label": "Lead Text" }
+      }
+    },
+    {
+      "type": "features",
+      "fields": {
+        "header_title": { "type": "string", "label": "Header Title" },
+        "grid_class": { "type": "string", "label": "Grid Class" },
+        "items": {
+          "type": "object",
+          "list": true,
+          "label": "Features",
+          "fields": {
+            "icon": { "type": "string", "label": "Icon (Iconify ID or HTML entity)" },
+            "title": { "type": "string", "label": "Title", "required": true },
+            "description": { "type": "string", "label": "Description", "required": true }
+          }
+        }
+      }
+    },
+    {
+      "type": "features",
+      "fields": {
+        "section_class": { "type": "string", "label": "Section Class" },
+        "header_title": { "type": "string", "label": "Header Title" },
+        "header_subtitle": { "type": "string", "label": "Header Subtitle" },
+        "items": {
+          "type": "object",
+          "list": true,
+          "label": "Features",
+          "fields": {
+            "icon": { "type": "string", "label": "Icon (Iconify ID or HTML entity)" },
+            "title": { "type": "string", "label": "Title", "required": true },
+            "description": { "type": "string", "label": "Description", "required": true }
+          }
+        }
+      }
+    },
+    {
+      "type": "stats",
+      "fields": {
+        "items": {
+          "type": "object",
+          "list": true,
+          "label": "Statistics",
+          "fields": {
+            "value": { "type": "string", "label": "Value", "required": true },
+            "label": { "type": "string", "label": "Label", "required": true }
+          }
+        }
+      }
+    },
+    {
+      "type": "cta",
+      "fields": {
+        "title": { "type": "string", "label": "Title", "required": true },
+        "description": { "type": "string", "label": "Description" },
+        "button": {
+          "type": "object",
+          "label": "Button",
+          "fields": {
+            "text": { "type": "string", "label": "Button Text", "required": true },
+            "href": { "type": "string", "label": "URL", "required": true },
+            "variant": { "type": "string", "label": "Variant" },
+            "size": { "type": "string", "label": "Size" }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "label": "Areas Covered Page",
+  "blocks": [
+    {
+      "type": "hero",
+      "fields": {
+        "full_width": { "type": "boolean", "label": "Full Width" },
+        "title": { "type": "string", "label": "Title", "required": true },
+        "lead": { "type": "string", "label": "Lead Text" }
+      }
+    },
+    {
+      "type": "features",
+      "fields": {
+        "header_title": { "type": "string", "label": "Header Title" },
+        "header_subtitle": { "type": "string", "label": "Header Subtitle" },
+        "grid_class": { "type": "string", "label": "Grid Class" },
+        "items": {
+          "type": "object",
+          "list": true,
+          "label": "Features",
+          "fields": {
+            "icon": { "type": "string", "label": "Icon (Iconify ID or HTML entity)" },
+            "title": { "type": "string", "label": "Title", "required": true },
+            "description": { "type": "string", "label": "Description", "required": true }
+          }
+        }
+      }
+    },
+    {
+      "type": "markdown",
+      "fields": {
+        "section_class": { "type": "string", "label": "Section Class" },
+        "content": { "type": "rich-text", "label": "Content" }
+      }
+    },
+    {
+      "type": "cta",
+      "fields": {
+        "title": { "type": "string", "label": "Title", "required": true },
+        "description": { "type": "string", "label": "Description" },
+        "button": {
+          "type": "object",
+          "label": "Button",
+          "fields": {
+            "text": { "type": "string", "label": "Button Text", "required": true },
+            "href": { "type": "string", "label": "URL", "required": true },
+            "variant": { "type": "string", "label": "Variant" },
+            "size": { "type": "string", "label": "Size" }
+          }
+        }
+      }
+    }
+  ]
+}
