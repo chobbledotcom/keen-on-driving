@@ -12,219 +12,75 @@ content:
     subfolders: false
     view:
       fields: [permalink, meta_title, header_text]
-      primary: header_text
-      sort: [header_text]
+      primary: meta_title
+      sort: [meta_title]
     fields:
-      - { name: header_image, type: image, label: Header Image }
+      - { name: layout, type: string, label: Layout }
+      - { name: permalink, type: string, label: Permalink }
       - { name: header_text, type: string, label: Header Text }
-      - { name: subtitle, type: string, label: Subtitle }
-      - { name: body, label: Body, type: code, options: { language: markdown } }
-      - { name: meta_description, type: string, label: Meta Description }
       - { name: meta_title, type: string, label: Meta Title }
+      - { name: meta_description, type: string, label: Meta Description }
+      - { name: no_index, type: boolean, label: No Index }
       - name: eleventyNavigation
         label: Navigation
         type: object
         fields:
-          - { name: key, type: string }
-          - { name: order, type: number }
-          - { name: url, type: string }
-      - { name: layout, type: string }
-      - { name: permalink, type: string }
-      
-  - name: news
-    label: News
-    path: news
-    type: collection
-    subfolders: false
-    fields:
-      - { name: title, type: string, label: Title }
-      - { name: header_image, type: image, label: Header Image }
-      - { name: date, label: Date, type: date }
-      - { name: subtitle, type: string, label: Subtitle }
+          - { name: key, type: string, label: Key }
+          - { name: order, type: number, label: Order }
       - { name: body, label: Body, type: code, options: { language: markdown } }
-      - { name: header_text, type: string, label: Header Text }
-      - { name: meta_description, type: string, label: Meta Description }
-      - { name: meta_title, type: string, label: Meta Title }
-      
-  - name: products
-    label: Products
-    path: products
-    type: collection
-    subfolders: false
-    fields:
-      - { name: title, type: string, label: Title }
-      - { name: header_image, type: image, label: Header Image }
-      - name: categories
-        label: Categories
-        type: reference
-        options:
-          collection: categories
-          multiple: true
-          search: "title"
-          value: "{path}"
-          label: "{title}"
-      - { name: price, label: Price, type: string }
-      - { name: etsy_url, label: Etsy URL, type: string }
-      - { name: body, label: Body, type: code, options: { language: markdown } }
-      - { name: features, type: string, label: Features, list: true }
-      - name: gallery
-        type: image
-        label: Gallery
-        options: { multiple: true }
-      - { name: header_text, type: string, label: Header Text }
-      - { name: meta_description, type: string, label: Meta Description }
-      - { name: meta_title, type: string, label: Meta Title }
-      - { name: subtitle, type: string, label: Subtitle }
-      
-  - name: categories
-    label: Categories
-    path: categories
-    type: collection
-    subfolders: false
-    filename: "{primary}.md"
-    fields:
-      - { name: title, type: string, label: Title }
-      - { name: body, label: Body, type: code, options: { language: markdown } }
-      - { name: featured, label: Featured, type: boolean }
-      - { name: header_image, type: image, label: Header Image }
-      - { name: header_text, type: string, label: Header Text }
-      - { name: meta_description, type: string, label: Meta Description }
-      - { name: meta_title, type: string, label: Meta Title }
-      - { name: subtitle, type: string, label: Subtitle }
-      
-  - name: team
-    label: Team
-    path: team
-    type: collection
-    subfolders: false
-    filename: "{primary}.md"
-    fields:
-      - { name: title, type: string, label: Name }
-      - { name: snippet, type: string, label: Role }
-      - { name: image, type: image, label: Profile Image }
-      - { name: header_image, type: image, label: Header Image }
-      - {
-          name: body,
-          label: Biography,
-          type: code,
-          options: { language: markdown },
-        }
-        
-  - name: reviews
-    label: Reviews
-    path: reviews
-    type: collection
-    subfolders: false
-    fields:
-      - { name: name, type: string, label: Name }
-      - { name: url, type: string, label: URL }
-      - { name: body, label: Body, type: code, options: { language: markdown } }
-      - name: products
-        label: Products
-        type: reference
-        options:
-          collection: products
-          multiple: true
-          search: "title"
-          value: "{path}"
-          label: "{title}"
-        
-  - name: events
-    label: Events
-    path: events
-    type: collection
-    subfolders: false
-    filename: "{primary}.md"
-    view:
-      fields: [title, event_date, recurring_date, event_location]
-      primary: title
-      sort: [title]
-    fields:
-      - { name: header_image, type: image, label: Header Image }
-      - { name: title, type: string, label: Title }
-      - { name: subtitle, type: string, label: Subtitle }
-      - { name: event_date, label: Event Date, type: date, required: false }
-      - { name: recurring_date, type: string, label: Recurring Date (e.g. "Every Friday at 2 PM"), required: false }
-      - { name: event_location, type: string, label: Event Location }
-      - { name: body, label: Body, type: code, options: { language: markdown } }
-      - { name: header_text, type: string, label: Header Text }
-      - { name: meta_title, type: string, label: Meta Title }
-      - { name: meta_description, type: string, label: Meta Description }
+      - name: blocks
+        label: Blocks
+        type: object
+        list: true
+        fields:
+          - { name: type, type: string, label: Block Type }
+          - { name: title, type: string, label: Title }
+          - { name: full_width, type: boolean, label: Full Width }
+          - { name: class, type: string, label: CSS Class }
+          - { name: section_class, type: string, label: Section Class }
+          - { name: lead, type: string, label: Lead Text }
+          - name: buttons
+            label: Buttons
+            type: object
+            list: true
+            fields:
+              - { name: text, type: string, label: Text }
+              - { name: href, type: string, label: URL }
+              - { name: variant, type: string, label: Variant }
+              - { name: size, type: string, label: Size }
+          - { name: header_title, type: string, label: Header Title }
+          - { name: header_subtitle, type: string, label: Header Subtitle }
+          - { name: grid_class, type: string, label: Grid Class }
+          - { name: heading_level, type: number, label: Heading Level }
+          - name: items
+            label: Items
+            type: object
+            list: true
+            fields:
+              - { name: icon, type: string, label: Icon }
+              - { name: title, type: string, label: Title }
+              - { name: description, type: string, label: Description }
+              - { name: value, type: string, label: Value }
+              - { name: label, type: string, label: Label }
+          - { name: content, type: code, label: Content, options: { language: markdown } }
+          - { name: reverse, type: boolean, label: Reverse Layout }
+          - name: button
+            label: Button
+            type: object
+            fields:
+              - { name: text, type: string, label: Text }
+              - { name: href, type: string, label: URL }
+              - { name: variant, type: string, label: Variant }
+              - { name: size, type: string, label: Size }
+          - { name: figure_type, type: string, label: Figure Type }
+          - { name: figure_html, type: code, label: Figure HTML, options: { language: html } }
+          - { name: variant, type: string, label: Variant }
+          - { name: left_title, type: string, label: Left Title }
+          - { name: left_content, type: code, label: Left Content, options: { language: markdown } }
+          - { name: right_title, type: string, label: Right Title }
+          - { name: right_content, type: code, label: Right Content, options: { language: markdown } }
+          - { name: description, type: string, label: Description }
 
-  - name: snippets
-    label: Snippets
-    path: snippets
-    type: collection
-    subfolders: false
-    filename: '{primary}.md'
-    fields:
-      - { name: name, type: string, label: Name }
-      - { name: body, label: Body, type: code, options: { language: markdown } }
-
-  - name: menus
-    label: Menus
-    path: menus
-    type: collection
-    subfolders: false
-    fields:
-      - { name: title, type: string, label: Title }
-      - { name: order, type: number, label: Order }
-      - { name: header_image, type: image, label: Header Image }
-      - { name: description, type: string, label: Description }
-      - { name: body, label: Body, type: code, options: { language: markdown } }
-      - { name: meta_title, type: string, label: Meta Title }
-      - { name: meta_description, type: string, label: Meta Description }
-
-  - name: menu-categories
-    label: Menu Categories
-    path: menu-categories
-    type: collection
-    subfolders: false
-    fields:
-      - { name: name, type: string, label: Name }
-      - { name: order, type: number, label: Order }
-      - name: menus
-        label: Menus
-        type: reference
-        options:
-          collection: menus
-          multiple: true
-          search: "title"
-          value: "{path}"
-          label: "{title}"
-      - { name: body, label: Body, type: code, options: { language: markdown } }
-
-  - name: menu-items
-    label: Menu Items
-    path: menu-items
-    type: collection
-    subfolders: false
-    fields:
-      - { name: name, type: string, label: Name }
-      - { name: price, type: string, label: Price }
-      - { name: is_vegan, type: boolean, label: Is Vegan }
-      - { name: is_gluten_free, type: boolean, label: Is Gluten Free }
-      - name: menu_categories
-        label: Menu Categories
-        type: reference
-        options:
-          collection: menu-categories
-          multiple: true
-          search: "name"
-          value: "{path}"
-          label: "{name}"
-      - { name: description, type: string, label: Description }
-      - { name: body, label: Body, type: code, options: { language: markdown } }
-  
-  - name: homepage
-    label: Homepage Settings
-    type: file
-    path: _data/homepage.json
-    fields:
-      - { name: show_products, type: boolean, label: Show Products Section, default: true }
-      - { name: show_menus, type: boolean, label: Show Menus Section, default: true }
-      - { name: show_news, type: boolean, label: Show News Section, default: true }
-      
   - name: site
     label: Site Configuration
     type: file
@@ -232,6 +88,7 @@ content:
     fields:
       - { name: name, type: string, label: Site Name }
       - { name: url, type: string, label: Site URL }
+      - { name: description, type: string, label: Site Description }
       - name: opening_times
         label: Opening Times
         type: object
@@ -243,16 +100,13 @@ content:
         label: Social Media Links
         type: object
         fields:
-          - { name: Github, type: string, label: Github }
-          - { name: Forgejo, type: string, label: Forgejo }
           - { name: Facebook, type: string, label: Facebook }
           - { name: Instagram, type: string, label: Instagram }
           - { name: TikTok, type: string, label: TikTok }
           - { name: Google, type: string, label: Google }
           - { name: WhatsApp, type: string, label: WhatsApp }
           - { name: RSS, type: string, label: RSS }
-      - { name: map_embed_src, type: string, label: Map Embed URL }
-      
+
   - name: meta
     label: Meta Configuration
     type: file
