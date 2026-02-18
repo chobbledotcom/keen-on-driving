@@ -1,15 +1,21 @@
 {
-	"name": "",
+	"name": "The Chobble Template",
 	"url": "https://example.chobble.com",
+	"description": "The Chobble template - a complete Eleventy starter for small businesses, built with Github Actions and hosted on Neocities or Bunny.net",
 	"socials": {
-		"Facebook": null,
-		"Instagram": null,
-		"TikTok": null,
-		"Google": null,
-		"WhatsApp": null,
+		"Github": "https://github.com/chobbledotcom/chobble-template",
+		"Forgejo": "https://git.chobble.com/chobble/chobble-template",
+		"Facebook": "https://www.facebook.com/profile.php?id=61571286130366",
+		"Mastodon": "https://social.lol/@stefan",
+		"Instagram": "https://example.chobble.com",
+		"TikTok": "https://example.chobble.com",
+		"Google": "https://maps.app.goo.gl/kNqgHRNaMgPDp7Mo8",
+		"WhatsApp": "https://example.chobble.com",
 		"RSS": "/feed.xml"
 	},
-	"sticky_mobile_nav": true,
-	"horizontal_nav": true,
-	"template_repo_url": "https://git.chobble.com/chobble/chobble-client"
+	"opening_times": [
+		{ "day": "Monday - Friday", "hours": "9am - 5pm" },
+		{ "day": "Saturday", "hours": "10am - 2pm" },
+		{ "day": "Sunday", "hours": "Closed" }
+	]
 }
