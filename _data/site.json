@@ -1,12 +1,9 @@
 {
-	"name": "The Chobble Template",
+	"name": "Keen On Driving",
 	"url": "https://example.chobble.com",
-	"description": "The Chobble template - a complete Eleventy starter for small businesses, built with Github Actions and hosted on Neocities or Bunny.net",
+	"description": "Manual driving lessons in Rossendale and BB4 postcodes. Patient, qualified instruction from Daniel Keenan ADI.",
 	"socials": {
-		"Github": "https://github.com/chobbledotcom/chobble-template",
-		"Forgejo": "https://git.chobble.com/chobble/chobble-template",
 		"Facebook": "https://www.facebook.com/profile.php?id=61571286130366",
-		"Mastodon": "https://social.lol/@stefan",
 		"Instagram": "https://example.chobble.com",
 		"TikTok": "https://example.chobble.com",
 		"Google": "https://maps.app.goo.gl/kNqgHRNaMgPDp7Mo8",
@@ -15,7 +12,7 @@
 	},
 	"opening_times": [
 		{ "day": "Monday - Friday", "hours": "9am - 5pm" },
-		{ "day": "Saturday", "hours": "10am - 2pm" },
+		{ "day": "Saturday", "hours": "By arrangement" },
 		{ "day": "Sunday", "hours": "Closed" }
 	]
 }
