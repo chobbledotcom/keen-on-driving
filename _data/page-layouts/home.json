@@ -1,0 +1,113 @@
+{
+  "label": "Home Page",
+  "blocks": [
+    {
+      "type": "hero",
+      "fields": {
+        "full_width": { "type": "boolean", "label": "Full Width" },
+        "class": { "type": "string", "label": "CSS Class" },
+        "title": { "type": "string", "label": "Title", "required": true },
+        "lead": { "type": "string", "label": "Lead Text" },
+        "buttons": {
+          "type": "object",
+          "list": true,
+          "label": "Buttons",
+          "fields": {
+            "text": { "type": "string", "label": "Button Text", "required": true },
+            "href": { "type": "string", "label": "URL", "required": true },
+            "variant": { "type": "string", "label": "Variant" },
+            "size": { "type": "string", "label": "Size" }
+          }
+        }
+      }
+    },
+    {
+      "type": "features",
+      "fields": {
+        "header_title": { "type": "string", "label": "Header Title" },
+        "header_subtitle": { "type": "string", "label": "Header Subtitle" },
+        "items": {
+          "type": "object",
+          "list": true,
+          "label": "Features",
+          "fields": {
+            "icon": { "type": "string", "label": "Icon (Iconify ID or HTML entity)" },
+            "title": { "type": "string", "label": "Title", "required": true },
+            "description": { "type": "string", "label": "Description", "required": true }
+          }
+        }
+      }
+    },
+    {
+      "type": "stats",
+      "fields": {
+        "section_class": { "type": "string", "label": "Section Class" },
+        "items": {
+          "type": "object",
+          "list": true,
+          "label": "Statistics",
+          "fields": {
+            "value": { "type": "string", "label": "Value", "required": true },
+            "label": { "type": "string", "label": "Label", "required": true }
+          }
+        }
+      }
+    },
+    {
+      "type": "split",
+      "fields": {
+        "title": { "type": "string", "label": "Title" },
+        "content": { "type": "rich-text", "label": "Content" },
+        "button": {
+          "type": "object",
+          "label": "Button",
+          "fields": {
+            "text": { "type": "string", "label": "Button Text", "required": true },
+            "href": { "type": "string", "label": "URL", "required": true },
+            "variant": { "type": "string", "label": "Variant" },
+            "size": { "type": "string", "label": "Size" }
+          }
+        },
+        "figure_type": { "type": "string", "label": "Figure Type (image, video, code, html)" },
+        "figure_html": { "type": "rich-text", "label": "Figure HTML Content" }
+      }
+    },
+    {
+      "type": "features",
+      "fields": {
+        "section_class": { "type": "string", "label": "Section Class" },
+        "header_title": { "type": "string", "label": "Header Title" },
+        "header_subtitle": { "type": "string", "label": "Header Subtitle" },
+        "grid_class": { "type": "string", "label": "Grid Class" },
+        "heading_level": { "type": "number", "label": "Heading Level" },
+        "items": {
+          "type": "object",
+          "list": true,
+          "label": "Features",
+          "fields": {
+            "icon": { "type": "string", "label": "Icon (Iconify ID or HTML entity)" },
+            "title": { "type": "string", "label": "Title", "required": true },
+            "description": { "type": "string", "label": "Description", "required": true }
+          }
+        }
+      }
+    },
+    {
+      "type": "cta",
+      "fields": {
+        "title": { "type": "string", "label": "Title", "required": true },
+        "description": { "type": "string", "label": "Description" },
+        "button": {
+          "type": "object",
+          "label": "Button",
+          "fields": {
+            "text": { "type": "string", "label": "Button Text", "required": true },
+            "href": { "type": "string", "label": "URL", "required": true },
+            "variant": { "type": "string", "label": "Variant" },
+            "size": { "type": "string", "label": "Size" }
+          }
+        }
+      }
+    }
+  ]
+}

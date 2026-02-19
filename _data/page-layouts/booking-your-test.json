@@ -1,0 +1,41 @@
+{
+  "label": "Booking Your Test Page",
+  "blocks": [
+    {
+      "type": "hero",
+      "fields": {
+        "full_width": { "type": "boolean", "label": "Full Width" },
+        "title": { "type": "string", "label": "Title", "required": true },
+        "lead": { "type": "string", "label": "Lead Text" }
+      }
+    },
+    {
+      "type": "split-full",
+      "fields": {
+        "full_width": { "type": "boolean", "label": "Full Width" },
+        "variant": { "type": "string", "label": "Variant" },
+        "left_title": { "type": "string", "label": "Left Title" },
+        "left_content": { "type": "rich-text", "label": "Left Content" },
+        "right_title": { "type": "string", "label": "Right Title" },
+        "right_content": { "type": "rich-text", "label": "Right Content" }
+      }
+    },
+    {
+      "type": "cta",
+      "fields": {
+        "title": { "type": "string", "label": "Title", "required": true },
+        "description": { "type": "string", "label": "Description" },
+        "button": {
+          "type": "object",
+          "label": "Button",
+          "fields": {
+            "text": { "type": "string", "label": "Button Text", "required": true },
+            "href": { "type": "string", "label": "URL", "required": true },
+            "variant": { "type": "string", "label": "Variant" },
+            "size": { "type": "string", "label": "Size" }
+          }
+        }
+      }
+    }
+  ]
+}

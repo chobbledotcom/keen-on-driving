@@ -20,6 +20,13 @@ content:
       primary: meta_title
       sort:
         - meta_title
+    exclude:
+      - contact.md
+      - booking-your-test.md
+      - home.md
+      - prices.md
+      - areas-covered.md
+      - about.md
     fields:
       - { name: subtitle, type: string, label: Subtitle }
       - { name: body, type: rich-text, label: Body }
@@ -130,6 +137,379 @@ content:
         fields:
           - { name: question, type: string, label: Question, required: true }
           - { name: answer, type: string, label: Answer, required: true }
+  - name: page-contact
+    label: Contact Page
+    type: file
+    path: pages/contact.md
+    fields:
+      - { name: meta_title, type: string, label: Meta Title, maxlength: 55 }
+      - name: meta_description
+        type: string
+        label: Meta Description
+        maxlength: 155
+      - name: blocks
+        label: Content Blocks
+        type: block
+        list: true
+        blockKey: type
+        blocks:
+          - name: hero
+            label: Hero
+            fields:
+              - { name: full_width, type: boolean, label: Full Width }
+              - { name: title, type: string, label: Title, required: true }
+              - { name: lead, type: string, label: Lead Text }
+          - name: contact_form
+            label: Contact Form
+            fields:
+              - { name: content, type: rich-text, label: Content }
+      - { name: body, type: rich-text, label: Body }
+  - name: page-booking-your-test
+    label: Booking Your Test Page
+    type: file
+    path: pages/booking-your-test.md
+    fields:
+      - { name: meta_title, type: string, label: Meta Title, maxlength: 55 }
+      - name: meta_description
+        type: string
+        label: Meta Description
+        maxlength: 155
+      - name: blocks
+        label: Content Blocks
+        type: block
+        list: true
+        blockKey: type
+        blocks:
+          - name: hero
+            label: Hero
+            fields:
+              - { name: full_width, type: boolean, label: Full Width }
+              - { name: title, type: string, label: Title, required: true }
+              - { name: lead, type: string, label: Lead Text }
+          - name: split-full
+            label: Split Full
+            fields:
+              - { name: full_width, type: boolean, label: Full Width }
+              - { name: variant, type: string, label: Variant }
+              - { name: left_title, type: string, label: Left Title }
+              - { name: left_content, type: rich-text, label: Left Content }
+              - { name: right_title, type: string, label: Right Title }
+              - { name: right_content, type: rich-text, label: Right Content }
+          - name: cta
+            label: Cta
+            fields:
+              - { name: title, type: string, label: Title, required: true }
+              - { name: description, type: string, label: Description }
+              - name: button
+                type: object
+                label: Button
+                fields:
+                  - name: text
+                    type: string
+                    label: Button Text
+                    required: true
+                  - { name: href, type: string, label: URL, required: true }
+                  - { name: variant, type: string, label: Variant }
+                  - { name: size, type: string, label: Size }
+      - { name: body, type: rich-text, label: Body }
+  - name: page-home
+    label: Home Page
+    type: file
+    path: pages/home.md
+    fields:
+      - { name: meta_title, type: string, label: Meta Title, maxlength: 55 }
+      - name: meta_description
+        type: string
+        label: Meta Description
+        maxlength: 155
+      - name: blocks
+        label: Content Blocks
+        type: block
+        list: true
+        blockKey: type
+        blocks:
+          - name: hero
+            label: Hero
+            fields:
+              - { name: full_width, type: boolean, label: Full Width }
+              - { name: class, type: string, label: CSS Class }
+              - { name: title, type: string, label: Title, required: true }
+              - { name: lead, type: string, label: Lead Text }
+              - name: buttons
+                type: object
+                label: Buttons
+                list: true
+                fields:
+                  - name: text
+                    type: string
+                    label: Button Text
+                    required: true
+                  - { name: href, type: string, label: URL, required: true }
+                  - { name: variant, type: string, label: Variant }
+                  - { name: size, type: string, label: Size }
+          - name: features
+            label: Features
+            fields:
+              - { name: header_title, type: string, label: Header Title }
+              - { name: header_subtitle, type: string, label: Header Subtitle }
+              - name: items
+                type: object
+                label: Features
+                list: true
+                fields:
+                  - name: icon
+                    type: string
+                    label: Icon (Iconify ID or HTML entity)
+                  - { name: title, type: string, label: Title, required: true }
+                  - name: description
+                    type: string
+                    label: Description
+                    required: true
+              - { name: section_class, type: string, label: Section Class }
+              - { name: grid_class, type: string, label: Grid Class }
+              - { name: heading_level, type: number, label: Heading Level }
+          - name: stats
+            label: Stats
+            fields:
+              - { name: section_class, type: string, label: Section Class }
+              - name: items
+                type: object
+                label: Statistics
+                list: true
+                fields:
+                  - { name: value, type: string, label: Value, required: true }
+                  - { name: label, type: string, label: Label, required: true }
+          - name: split
+            label: Split
+            fields:
+              - { name: title, type: string, label: Title }
+              - { name: content, type: rich-text, label: Content }
+              - name: button
+                type: object
+                label: Button
+                fields:
+                  - name: text
+                    type: string
+                    label: Button Text
+                    required: true
+                  - { name: href, type: string, label: URL, required: true }
+                  - { name: variant, type: string, label: Variant }
+                  - { name: size, type: string, label: Size }
+              - name: figure_type
+                type: string
+                label: Figure Type (image, video, code, html)
+              - name: figure_html
+                type: rich-text
+                label: Figure HTML Content
+          - name: cta
+            label: Cta
+            fields:
+              - { name: title, type: string, label: Title, required: true }
+              - { name: description, type: string, label: Description }
+              - name: button
+                type: object
+                label: Button
+                fields:
+                  - name: text
+                    type: string
+                    label: Button Text
+                    required: true
+                  - { name: href, type: string, label: URL, required: true }
+                  - { name: variant, type: string, label: Variant }
+                  - { name: size, type: string, label: Size }
+      - { name: body, type: rich-text, label: Body }
+  - name: page-prices
+    label: Prices Page
+    type: file
+    path: pages/prices.md
+    fields:
+      - { name: meta_title, type: string, label: Meta Title, maxlength: 55 }
+      - name: meta_description
+        type: string
+        label: Meta Description
+        maxlength: 155
+      - name: blocks
+        label: Content Blocks
+        type: block
+        list: true
+        blockKey: type
+        blocks:
+          - name: hero
+            label: Hero
+            fields:
+              - { name: full_width, type: boolean, label: Full Width }
+              - { name: title, type: string, label: Title, required: true }
+              - { name: lead, type: string, label: Lead Text }
+          - name: features
+            label: Features
+            fields:
+              - { name: header_title, type: string, label: Header Title }
+              - { name: grid_class, type: string, label: Grid Class }
+              - name: items
+                type: object
+                label: Features
+                list: true
+                fields:
+                  - name: icon
+                    type: string
+                    label: Icon (Iconify ID or HTML entity)
+                  - { name: title, type: string, label: Title, required: true }
+                  - name: description
+                    type: string
+                    label: Description
+                    required: true
+              - { name: section_class, type: string, label: Section Class }
+              - { name: header_subtitle, type: string, label: Header Subtitle }
+          - name: stats
+            label: Stats
+            fields:
+              - name: items
+                type: object
+                label: Statistics
+                list: true
+                fields:
+                  - { name: value, type: string, label: Value, required: true }
+                  - { name: label, type: string, label: Label, required: true }
+          - name: cta
+            label: Cta
+            fields:
+              - { name: title, type: string, label: Title, required: true }
+              - { name: description, type: string, label: Description }
+              - name: button
+                type: object
+                label: Button
+                fields:
+                  - name: text
+                    type: string
+                    label: Button Text
+                    required: true
+                  - { name: href, type: string, label: URL, required: true }
+                  - { name: variant, type: string, label: Variant }
+                  - { name: size, type: string, label: Size }
+      - { name: body, type: rich-text, label: Body }
+  - name: page-areas-covered
+    label: Areas Covered Page
+    type: file
+    path: pages/areas-covered.md
+    fields:
+      - { name: meta_title, type: string, label: Meta Title, maxlength: 55 }
+      - name: meta_description
+        type: string
+        label: Meta Description
+        maxlength: 155
+      - name: blocks
+        label: Content Blocks
+        type: block
+        list: true
+        blockKey: type
+        blocks:
+          - name: hero
+            label: Hero
+            fields:
+              - { name: full_width, type: boolean, label: Full Width }
+              - { name: title, type: string, label: Title, required: true }
+              - { name: lead, type: string, label: Lead Text }
+          - name: features
+            label: Features
+            fields:
+              - { name: header_title, type: string, label: Header Title }
+              - { name: header_subtitle, type: string, label: Header Subtitle }
+              - { name: grid_class, type: string, label: Grid Class }
+              - name: items
+                type: object
+                label: Features
+                list: true
+                fields:
+                  - name: icon
+                    type: string
+                    label: Icon (Iconify ID or HTML entity)
+                  - { name: title, type: string, label: Title, required: true }
+                  - name: description
+                    type: string
+                    label: Description
+                    required: true
+          - name: markdown
+            label: Markdown
+            fields:
+              - { name: section_class, type: string, label: Section Class }
+              - { name: content, type: rich-text, label: Content }
+          - name: cta
+            label: Cta
+            fields:
+              - { name: title, type: string, label: Title, required: true }
+              - { name: description, type: string, label: Description }
+              - name: button
+                type: object
+                label: Button
+                fields:
+                  - name: text
+                    type: string
+                    label: Button Text
+                    required: true
+                  - { name: href, type: string, label: URL, required: true }
+                  - { name: variant, type: string, label: Variant }
+                  - { name: size, type: string, label: Size }
+      - { name: body, type: rich-text, label: Body }
+  - name: page-about
+    label: About Page
+    type: file
+    path: pages/about.md
+    fields:
+      - { name: meta_title, type: string, label: Meta Title, maxlength: 55 }
+      - name: meta_description
+        type: string
+        label: Meta Description
+        maxlength: 155
+      - name: blocks
+        label: Content Blocks
+        type: block
+        list: true
+        blockKey: type
+        blocks:
+          - name: hero
+            label: Hero
+            fields:
+              - { name: full_width, type: boolean, label: Full Width }
+              - { name: title, type: string, label: Title, required: true }
+              - { name: lead, type: string, label: Lead Text }
+          - name: split
+            label: Split
+            fields:
+              - { name: title, type: string, label: Title }
+              - { name: content, type: rich-text, label: Content }
+              - name: figure_type
+                type: string
+                label: Figure Type (image, video, code, html)
+              - name: figure_html
+                type: rich-text
+                label: Figure HTML Content
+              - { name: reverse, type: boolean, label: Reverse Layout }
+          - name: split-full
+            label: Split Full
+            fields:
+              - { name: full_width, type: boolean, label: Full Width }
+              - { name: variant, type: string, label: Variant }
+              - { name: left_title, type: string, label: Left Title }
+              - { name: left_content, type: rich-text, label: Left Content }
+              - { name: right_title, type: string, label: Right Title }
+              - { name: right_content, type: rich-text, label: Right Content }
+          - name: cta
+            label: Cta
+            fields:
+              - { name: title, type: string, label: Title, required: true }
+              - { name: description, type: string, label: Description }
+              - name: button
+                type: object
+                label: Button
+                fields:
+                  - name: text
+                    type: string
+                    label: Button Text
+                    required: true
+                  - { name: href, type: string, label: URL, required: true }
+                  - { name: variant, type: string, label: Variant }
+                  - { name: size, type: string, label: Size }
+      - { name: body, type: rich-text, label: Body }
   - name: site
     label: Site Configuration
     type: file
