@@ -14,7 +14,7 @@ blocks:
 
   - type: features
     header_title: Individual Lessons
-    grid_class: grid--2 text-center
+    grid_class: grid--2 stack text-center
     items:
       - icon: "hugeicons:star"
         title: Starter Lesson
