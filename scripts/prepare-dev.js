@@ -5,7 +5,10 @@ import { bun, copyDir, find, fs, git, path, root } from "./utils.js";
 const build = path(buildDir);
 const template = path(buildDir, "template");
 const dev = path(buildDir, "dev");
-const localTemplate = join(root, "..", "chobble-template");
+const localTemplate =
+  fs.exists(join(root, "..", "chobble-template"))
+    ? join(root, "..", "chobble-template")
+    : join(root, "chobble-template");
 
 const templateExcludes = [
   ".git",
@@ -22,7 +25,9 @@ const rootExcludes = [
   ".direnv",
   "*.nix",
   "README.md",
+  "CLAUDE.md",
   buildDir,
+  "chobble-template",
   "scripts",
   "node_modules",
   "package*.json",

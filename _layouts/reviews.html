@@ -4,4 +4,6 @@ layout: design-system-base
 
 <div class="prose">{{ content }}</div>
 
-{% include "item-reviews-section.html" %}
+{%- assign reviews = collections.reviews -%}
+{%- assign product_links = true -%}
+{% include "reviews-list.html" %}
