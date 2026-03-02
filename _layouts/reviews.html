@@ -1,0 +1,8 @@
+---
+layout: design-system-base
+---
+
+<div class="prose">{{ content }}</div>
+
+{%- assign reviews = collections.reviews -%} {%- assign product_links = true -%}
+{% include "reviews-list.html" %}
