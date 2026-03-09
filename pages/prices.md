@@ -50,14 +50,14 @@ blocks:
     items:
       - value: £35
         label: Per Hour From
+      - value: 1.5hr
+        label: "Lesson Length "
       - value: 2hr
         label: Lesson Length
       - value: 40hr
         label: Max Block Booking
       - value: £70
         label: Starter Lesson
-      - value: 1.5hr
-        label: "Lesson Length "
   - type: cta
     title: Ready to Book?
     description: Get in touch to discuss which option is right for you and book your
