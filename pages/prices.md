@@ -44,8 +44,8 @@ blocks:
         description: £1,400 total (£35 per hour). Suited to complete beginners with no
           previous driving experience.
     section_class: alt
-    header_subtitle: Commit to a block of hours and pay less per hour. All block
-      bookings are for 2-hour lessons.
+    header_subtitle: Commit to a block of hours and pay less per hour. Choose
+      between 1.5 hours or 2 hour driving lessons
   - type: stats
     items:
       - value: £35
