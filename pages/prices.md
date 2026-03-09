@@ -30,7 +30,7 @@ blocks:
       - icon: hugeicons:time-02
         title: 10 Hours
         description: £380 total (£38 per hour). A good starting point for those with
-          some previous experience.
+          some or no previous experience.
       - icon: hugeicons:time-02
         title: 20 Hours
         description: £740 total (£37 per hour). Ideal for building on existing skills
