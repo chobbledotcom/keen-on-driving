@@ -14,8 +14,8 @@ blocks:
     class: gradient
     title: Manual Driving Lessons in Rossendale
     lead: Patient, professional driving instruction throughout Rossendale and the
-      BB4 postcodes. Learn to drive with an instructor who understands your
-      needs.
+      BB4 postcodes. Learn to drive with a driving instructor who understands
+      your needs.
     buttons:
       - text: View Prices
         href: /prices/
@@ -33,7 +33,8 @@ blocks:
       - icon: hugeicons:user-multiple
         title: Patient & Adaptable
         description: Experience teaching pupils of all abilities, including those with
-          anxiety, ADHD, and autism. Every lesson is taken at your pace.
+          anxiety, ADHD, and autism. Every lesson is taken at a pace that suits
+          you best.
       - icon: hugeicons:car-01
         title: Qualified ADI
         description: Fully qualified Approved Driving Instructor with training from
@@ -45,6 +46,8 @@ blocks:
   - type: stats
     section_class: alt
     items:
+      - value: 1.5hr
+        label: Lesson Length
       - value: 2hr
         label: Lesson Length
       - value: BB4
@@ -88,7 +91,10 @@ blocks:
         description: Lessons available throughout Haslingden and Helmshore.
       - icon: hugeicons:maps-location-01
         title: Waterfoot
-        description: Including Crawshawbooth and the wider valley.
+        description: Including Lumb and Water.
+      - icon: hugeicons:maps-location-01
+        title: Crawshawbooth
+        description: Including Loveclough and the wider area.
     section_class: alt
     grid_class: grid text-center
     heading_level: 4
