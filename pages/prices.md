@@ -33,8 +33,8 @@ blocks:
           some or no previous experience.
       - icon: hugeicons:time-02
         title: 20 Hours
-        description: £740 total (£37 per hour). Ideal for building on existing skills
-          and working towards test readiness.
+        description: £740 total (£37 per hour). Ideal for first time learners or
+          building on existing skills and working towards test readiness.
       - icon: hugeicons:time-02
         title: 30 Hours
         description: £1,080 total (£36 per hour). Suited to those who have had lessons
