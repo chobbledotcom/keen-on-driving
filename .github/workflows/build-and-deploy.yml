@@ -146,7 +146,7 @@ jobs:
     if: failure()
     steps:
       - name: Send failure notification
-        uses: NiNiyas/ntfy-action@master
+        uses: NiNiyas/ntfy-action@V1.0.5
         with:
           url: 'https://ntfy.sh'
           topic: ${{ secrets.NTFY_TOPIC }}
