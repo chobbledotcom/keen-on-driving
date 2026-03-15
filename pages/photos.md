@@ -18,41 +18,31 @@ blocks:
 
       Congratulations to all these students who passed their driving test first time with Keen On Driving!
 
-      <div class="gallery">
-        <figure>
-          <img src="/images/sam-first-time-pass.jpg" alt="Sam celebrating a first time driving test pass" loading="lazy" />
-          <figcaption>Sam - first time pass!</figcaption>
-        </figure>
-        <figure>
-          <img src="/images/chris-first-time-pass.jpg" alt="Chris celebrating a first time driving test pass" loading="lazy" />
-          <figcaption>Chris - first time pass!</figcaption>
-        </figure>
-        <figure>
-          <img src="/images/albert-first-time-pass.jpg" alt="Albert celebrating a first time driving test pass" loading="lazy" />
-          <figcaption>Albert - passed first time! From driving tractors on the family farm to a fantastic first time pass.</figcaption>
-        </figure>
-      </div>
+  - type: gallery
+    aspect_ratio: "9/16"
+    items:
+      - image: sam-first-time-pass.jpg
+        caption: "Sam - first time pass!"
+      - image: chris-first-time-pass.jpg
+        caption: "Chris - first time pass!"
+      - image: albert-first-time-pass.jpg
+        caption: "Albert - passed first time! From driving tractors on the family farm to a fantastic first time pass."
 
+  - type: markdown
+    content: |
       ## More Students
 
-      <div class="gallery">
-        <figure>
-          <img src="/images/amber.jpg" alt="Amber - Keen On Driving student" loading="lazy" />
-          <figcaption>Amber</figcaption>
-        </figure>
-        <figure>
-          <img src="/images/billy.jpg" alt="Billy - Keen On Driving student" loading="lazy" />
-          <figcaption>Billy</figcaption>
-        </figure>
-        <figure>
-          <img src="/images/ella.jpg" alt="Ella - Keen On Driving student" loading="lazy" />
-          <figcaption>Ella</figcaption>
-        </figure>
-        <figure>
-          <img src="/images/lennon.jpg" alt="Lennon - Keen On Driving student" loading="lazy" />
-          <figcaption>Lennon</figcaption>
-        </figure>
-      </div>
+  - type: gallery
+    aspect_ratio: "9/16"
+    items:
+      - image: amber.jpg
+        caption: "Amber"
+      - image: billy.jpg
+        caption: "Billy"
+      - image: ella.jpg
+        caption: "Ella"
+      - image: lennon.jpg
+        caption: "Lennon"
 
   - type: cta
     title: Ready to Be Our Next Success Story?
