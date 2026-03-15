@@ -34,7 +34,7 @@ export const fs = {
 export const run = (cmd, opts = {}) =>
   Bun.spawnSync(cmd, { stdio: ["inherit", "inherit", "inherit"], ...opts });
 
-export const shell = (cmd, opts = {}) => run(["sh", "--", "-c", cmd], opts);
+export const shell = (cmd, opts = {}) => run(["sh", "-c", cmd], opts);
 
 export const spawn = (cmd, opts = {}) =>
   Bun.spawn(cmd, { stdio: ["inherit", "inherit", "inherit"], ...opts });
