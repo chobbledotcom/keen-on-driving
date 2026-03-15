@@ -19,7 +19,7 @@ blocks:
       Congratulations to all these students who passed their driving test first time with Keen On Driving!
 
   - type: gallery
-    aspect_ratio: "9/16"
+    aspect_ratio: "3/4"
     items:
       - image: sam-first-time-pass.jpg
         caption: "Sam - first time pass!"
@@ -33,7 +33,7 @@ blocks:
       ## More Students
 
   - type: gallery
-    aspect_ratio: "9/16"
+    aspect_ratio: "3/4"
     items:
       - image: amber.jpg
         caption: "Amber"
