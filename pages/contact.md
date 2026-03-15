@@ -6,15 +6,6 @@ eleventyNavigation:
   key: Contact
   order: 6
 blocks:
-  - type: hero
-    full_width: true
-    title: Get in Touch
-    lead: >-
-      Ready to start your driving lessons? Have a question about prices or availability? Drop Daniel a message.
-
-
-      Call or WhatsApp: [07961 118 294](https://wa.me/447961118294?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20driving%20lessons)
-
   - type: contact_form
     content: |
       ## Contact Keen On Driving
