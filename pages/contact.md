@@ -12,6 +12,9 @@ blocks:
     lead: >-
       Ready to start your driving lessons? Have a question about prices or availability? Drop Daniel a message.
 
+
+      Call or WhatsApp: [07961 118 294](https://wa.me/447961118294?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20driving%20lessons)
+
   - type: contact_form
     content: |
       ## Contact Keen On Driving
@@ -19,4 +22,10 @@ blocks:
       Use the form to get in touch with Daniel about booking lessons, asking questions, or anything else.
 
       Keen On Driving covers **Rossendale and the BB4 postcodes** including Rawtenstall, Crawshawbooth, Waterfoot, Haslingden, and Helmshore.
+
+      You can also reach Daniel directly:
+
+      **Phone:** [07961 118 294](tel:07961118294)
+
+      **WhatsApp:** [Message on WhatsApp](https://wa.me/447961118294?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20driving%20lessons)
 ---

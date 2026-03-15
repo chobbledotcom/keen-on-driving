@@ -1,2 +1,34 @@
 @charset "utf-8";
 @use "sass:color";
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+
+  figure {
+    margin: 0;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.contact-details {
+  margin: 1.5rem 0;
+
+  a {
+    font-weight: 600;
+  }
+}
