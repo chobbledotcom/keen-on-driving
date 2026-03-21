@@ -250,8 +250,7 @@ content:
           - name: features
             label: Features
             fields:
-              - { name: header_title, type: string, label: Header Title }
-              - { name: header_subtitle, type: string, label: Header Subtitle }
+              - { name: header_intro, type: string, label: Header Intro }
               - name: items
                 type: object
                 label: Features
@@ -343,7 +342,7 @@ content:
           - name: features
             label: Features
             fields:
-              - { name: header_title, type: string, label: Header Title }
+              - { name: header_intro, type: string, label: Header Intro }
               - { name: grid_class, type: string, label: Grid Class }
               - name: items
                 type: object
@@ -359,7 +358,6 @@ content:
                     label: Description
                     required: true
               - { name: section_class, type: string, label: Section Class }
-              - { name: header_subtitle, type: string, label: Header Subtitle }
           - name: stats
             label: Stats
             fields:
@@ -412,8 +410,7 @@ content:
           - name: features
             label: Features
             fields:
-              - { name: header_title, type: string, label: Header Title }
-              - { name: header_subtitle, type: string, label: Header Subtitle }
+              - { name: header_intro, type: string, label: Header Intro }
               - { name: grid_class, type: string, label: Grid Class }
               - name: items
                 type: object

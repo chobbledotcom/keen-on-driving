@@ -13,7 +13,7 @@ blocks:
     lead: All lessons are 1.5 hours or 2 hours long. Save money with block bookings
       — the more hours you book, the less you pay per hour.
   - type: features
-    header_title: Individual Lessons
+    header_intro: "## Individual Lessons"
     grid_class: grid--2 stack text-center
     items:
       - icon: hugeicons:star
@@ -25,7 +25,10 @@ blocks:
         description: £80 for a 2-hour lesson. Regular lessons to build your skills and
           confidence on the road.
   - type: features
-    header_title: Block Bookings
+    header_intro: |
+      ## Block Bookings
+
+      Commit to a block of hours and pay less per hour. Choose between 1.5 hours or 2 hour driving lessons
     items:
       - icon: hugeicons:time-02
         title: 10 Hours
@@ -44,8 +47,6 @@ blocks:
         description: £1,400 total (£35 per hour). Suited to complete beginners with no
           previous driving experience.
     section_class: alt
-    header_subtitle: Commit to a block of hours and pay less per hour. Choose
-      between 1.5 hours or 2 hour driving lessons
   - type: stats
     items:
       - value: £35
