@@ -26,9 +26,10 @@ blocks:
         variant: secondary
         size: lg
   - type: features
-    header_title: Why Choose Keen On Driving?
-    header_subtitle: Every learner is different. Daniel tailors each lesson to suit
-      your pace, your confidence, and your goals.
+    header_intro: |
+      ## Why Choose Keen On Driving?
+
+      Every learner is different. Daniel tailors each lesson to suit your pace, your confidence, and your goals.
     items:
       - icon: hugeicons:user-multiple
         title: Patient & Adaptable
@@ -80,8 +81,10 @@ blocks:
       ADI</strong><p style="opacity: 0.8; margin: 0.5rem 0 0;">Your patient,
       qualified driving instructor</p></div>'
   - type: features
-    header_title: Areas Covered
-    header_subtitle: Serving Rossendale and the BB4 postcodes across Lancashire
+    header_intro: |
+      ## Areas Covered
+
+      Serving Rossendale and the BB4 postcodes across Lancashire
     items:
       - icon: hugeicons:maps-location-01
         title: Rawtenstall
