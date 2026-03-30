@@ -163,6 +163,21 @@ content:
             label: Contact Form
             fields:
               - { name: content, type: rich-text, label: Content }
+          - name: icon_links
+            label: Icon Links
+            fields:
+              - { name: intro, type: rich-text, label: Intro Content (Markdown) }
+              - name: items
+                type: object
+                label: Links
+                list: true
+                fields:
+                  - name: icon
+                    type: string
+                    label: Icon (Iconify ID or HTML entity)
+                    required: true
+                  - { name: text, type: string, label: Link Text, required: true }
+                  - { name: url, type: string, label: URL }
       - { name: body, type: rich-text, label: Body }
   - name: page-booking-your-test
     label: Booking Your Test Page
