@@ -8,13 +8,11 @@ eleventyNavigation:
   order: 4
 blocks:
   - type: hero
-    full_width: true
     title: Prices
     lead: All lessons are 1.5 hours or 2 hours long. Save money with block bookings
       — the more hours you book, the less you pay per hour.
   - type: features
     header_intro: "## Individual Lessons"
-    grid_class: grid--2 stack text-center
     items:
       - icon: hugeicons:star
         title: Starter Lesson
@@ -46,7 +44,6 @@ blocks:
         title: 40 Hours
         description: £1,400 total (£35 per hour). Suited to complete beginners with no
           previous driving experience.
-    section_class: alt
   - type: stats
     items:
       - value: £35
