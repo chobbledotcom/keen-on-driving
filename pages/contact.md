@@ -6,14 +6,14 @@ eleventyNavigation:
   key: Contact
   order: 6
 blocks:
-  - type: contact_form
+  - type: contact-form
     content: |
       ## Contact Keen On Driving
 
       Use the form to get in touch with Daniel about booking lessons, asking questions, or anything else.
 
       Keen On Driving covers **Rossendale and the BB4 postcodes** including Rawtenstall, Crawshawbooth, Waterfoot, Haslingden, and Helmshore.
-  - type: icon_links
+  - type: icon-links
     intro: |
       ### Get in touch
     items:

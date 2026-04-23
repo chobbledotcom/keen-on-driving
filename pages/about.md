@@ -9,10 +9,9 @@ eleventyNavigation:
   order: 2
 blocks:
   - type: hero
-    full_width: true
     title: About Keen On Driving
     lead: Meet Daniel Keenan, your qualified driving instructor in Rossendale.
-  - type: split
+  - type: split-html
     title: Daniel's Journey
     content: >-
       Keen On Driving was established by Daniel Keenan at the beginning of 2026.
@@ -25,7 +24,6 @@ blocks:
       received his training from Linda Edwards at Express Driver Training,
       alongside the mentorship of Andy Scanlon of Scan School of Motoring.
       Without their help none of this would have been possible!
-    figure_type: html
     figure_html: '<div style="background: linear-gradient(135deg, #1e3a5f 0%,
       #2d5a87 100%); padding: 3rem; text-align: center; color: white;
       border-radius: 12px;"><div style="font-size: 4rem; margin-bottom:
@@ -33,7 +31,7 @@ blocks:
       Instructor</strong><p style="opacity: 0.8; margin: 0.5rem 0 0;">A passion
       for one-to-one teaching</p></div>'
     reverse: false
-  - type: split
+  - type: split-html
     title: Training & Mentorship
     content: >-
       Linda Edwards has a wealth of experience in teaching potential driving
@@ -52,7 +50,6 @@ blocks:
       passing the final test nationally, it was challenging at times, but Andy
       always found a way to keep Daniel motivated. These are experiences Daniel
       now passes on to his pupils to give them every chance of success.
-    figure_type: html
     figure_html: |-
       🏆
 
@@ -61,7 +58,6 @@ blocks:
       Among the top 35% nationally
     reverse: true
   - type: split-full
-    full_width: true
     variant: dark-left
     left_title: Teaching All Abilities
     left_content: >-

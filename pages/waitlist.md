@@ -9,12 +9,11 @@ eleventyNavigation:
   order: 7
 blocks:
   - type: hero
-    full_width: true
     title: Join the Waitlist
     lead: Spaces for driving lessons are limited and fill up quickly. Join the
       waitlist to be first in line when a slot becomes available. Pop your details
       in below and we'll be in touch as soon as we can fit you in.
-  - type: split
+  - type: split-html
     title: Reserve Your Place
     content: >-
       Demand for lessons is high, so there may be a short wait before we can get
@@ -23,7 +22,6 @@ blocks:
 
 
       Once a space opens up, we'll contact you to arrange your first lesson.
-    figure_type: html
     figure_html: >-
       <iframe
       src="https://www.totaldrive.app/a/waiting_widget.php?17662331294612"

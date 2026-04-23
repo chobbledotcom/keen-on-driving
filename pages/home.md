@@ -10,7 +10,6 @@ eleventyNavigation:
   order: 1
 blocks:
   - type: hero
-    full_width: true
     class: gradient
     title: Manual Driving Lessons in Rossendale
     lead: Patient, professional driving instruction throughout Rossendale and the
@@ -45,7 +44,6 @@ blocks:
         description: Save money with block bookings from 10 to 40 hours. The more you
           book, the less you pay per hour.
   - type: stats
-    section_class: alt
     items:
       - value: 1.5hr
         label: Lesson Length
@@ -57,7 +55,7 @@ blocks:
         label: Per Hour From
       - value: 1:1
         label: Tailored Tuition
-  - type: split
+  - type: split-html
     title: About Your Instructor
     content: >-
       Daniel Keenan established Keen On Driving at the beginning of 2026. Having
@@ -73,7 +71,6 @@ blocks:
       text: Read More About Daniel
       href: /about/
       variant: secondary
-    figure_type: html
     figure_html: '<div style="background: linear-gradient(135deg, #1e3a5f 0%,
       #2d5a87 100%); padding: 3rem; text-align: center; color: white;
       border-radius: 12px;"><div style="font-size: 4rem; margin-bottom:
@@ -98,8 +95,6 @@ blocks:
       - icon: hugeicons:maps-location-01
         title: Crawshawbooth
         description: Including Loveclough and the wider area.
-    section_class: alt
-    grid_class: grid text-center
     heading_level: 4
   - type: cta
     title: Ready to Start Learning?

@@ -7,13 +7,11 @@ eleventyNavigation:
   order: 5
 blocks:
   - type: hero
-    full_width: true
     title: Booking Your Driving Test
     lead: >-
       Important information about booking your practical driving test when learning with Keen On Driving.
 
   - type: split-full
-    full_width: true
     variant: dark-left
     left_title: Before You Book
     left_content: |

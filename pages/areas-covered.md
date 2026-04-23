@@ -7,7 +7,6 @@ eleventyNavigation:
   order: 3
 blocks:
   - type: hero
-    full_width: true
     title: Areas Covered
     lead: >-
       Keen On Driving offers manual driving lessons throughout Rossendale and the BB4 postcodes in Lancashire.
@@ -17,7 +16,6 @@ blocks:
       ## Where We Teach
 
       Daniel covers the following areas across the Rossendale Valley
-    grid_class: grid text-center
     items:
       - icon: "hugeicons:maps-location-01"
         title: Rawtenstall
@@ -39,7 +37,6 @@ blocks:
         description: Full coverage across the BB4 postcode area and surrounding routes.
 
   - type: markdown
-    section_class: alt
     content: |
       ## Test Centre
 

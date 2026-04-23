@@ -7,7 +7,6 @@ eleventyNavigation:
   order: 5
 blocks:
   - type: hero
-    full_width: true
     title: Student Photos
     lead: >-
       A gallery of Keen On Driving students celebrating their successes. Well done to everyone!
