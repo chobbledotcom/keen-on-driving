@@ -19,9 +19,7 @@ import {
 const build = path(buildDir);
 const template = path(buildDir, "template");
 const dev = path(buildDir, "dev");
-const localTemplate = fs.exists(join(root, "..", "chobble-template"))
-  ? join(root, "..", "chobble-template")
-  : join(root, "chobble-template");
+const localTemplate = join(root, "..", "chobble-template");
 
 export const prep = () => {
   console.log("Preparing build...");

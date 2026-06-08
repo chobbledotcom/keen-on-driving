@@ -18,12 +18,10 @@ export const sourceExcludes = [
   ".*",
   "*.nix",
   "README.md",
-  "CLAUDE.md",
   "scripts",
   "node_modules",
   "package*.json",
   "bun.lock",
-  "chobble-template",
   "old_site",
   ...(process.env.PLACEHOLDER_IMAGES === "1" ? ["images"] : []),
 ];
