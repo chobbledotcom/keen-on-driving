@@ -6,7 +6,7 @@
       "fields": {
         "full_width": { "type": "boolean", "label": "Full Width" },
         "class": { "type": "string", "label": "CSS Class" },
-        "title": { "type": "string", "label": "Title", "required": true },
+        "name": { "type": "string", "label": "Name", "required": true },
         "lead": { "type": "string", "label": "Lead Text" },
         "buttons": {
           "type": "object",
@@ -24,14 +24,14 @@
     {
       "type": "features",
       "fields": {
-        "header_intro": { "type": "rich-text", "label": "Header Intro" },
+        "intro_content": { "type": "rich-text", "label": "Intro Content" },
         "items": {
           "type": "object",
           "list": true,
           "label": "Features",
           "fields": {
             "icon": { "type": "string", "label": "Icon (Iconify ID or HTML entity)" },
-            "title": { "type": "string", "label": "Title", "required": true },
+            "name": { "type": "string", "label": "Name", "required": true },
             "description": { "type": "string", "label": "Description", "required": true }
           }
         }
@@ -55,7 +55,6 @@
     {
       "type": "split",
       "fields": {
-        "title": { "type": "string", "label": "Title" },
         "content": { "type": "rich-text", "label": "Content" },
         "button": {
           "type": "object",
@@ -75,16 +74,14 @@
       "type": "features",
       "fields": {
         "section_class": { "type": "string", "label": "Section Class" },
-        "header_intro": { "type": "rich-text", "label": "Header Intro" },
-        "grid_class": { "type": "string", "label": "Grid Class" },
-        "heading_level": { "type": "number", "label": "Heading Level" },
+        "intro_content": { "type": "rich-text", "label": "Intro Content" },
         "items": {
           "type": "object",
           "list": true,
           "label": "Features",
           "fields": {
             "icon": { "type": "string", "label": "Icon (Iconify ID or HTML entity)" },
-            "title": { "type": "string", "label": "Title", "required": true },
+            "name": { "type": "string", "label": "Name", "required": true },
             "description": { "type": "string", "label": "Description", "required": true }
           }
         }
@@ -93,8 +90,7 @@
     {
       "type": "cta",
       "fields": {
-        "title": { "type": "string", "label": "Title", "required": true },
-        "description": { "type": "string", "label": "Description" },
+        "content": { "type": "rich-text", "label": "Content", "required": true },
         "button": {
           "type": "object",
           "label": "Button",

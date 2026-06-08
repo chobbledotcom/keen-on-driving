@@ -5,14 +5,13 @@
       "type": "hero",
       "fields": {
         "full_width": { "type": "boolean", "label": "Full Width" },
-        "title": { "type": "string", "label": "Title", "required": true },
+        "name": { "type": "string", "label": "Name", "required": true },
         "lead": { "type": "string", "label": "Lead Text" }
       }
     },
     {
       "type": "split",
       "fields": {
-        "title": { "type": "string", "label": "Title" },
         "content": { "type": "rich-text", "label": "Content" },
         "figure_type": { "type": "string", "label": "Figure Type (image, video, code, html)" },
         "figure_html": { "type": "rich-text", "label": "Figure HTML Content" }
@@ -21,7 +20,6 @@
     {
       "type": "split",
       "fields": {
-        "title": { "type": "string", "label": "Title" },
         "reverse": { "type": "boolean", "label": "Reverse Layout" },
         "content": { "type": "rich-text", "label": "Content" },
         "figure_type": { "type": "string", "label": "Figure Type (image, video, code, html)" },
@@ -33,17 +31,14 @@
       "fields": {
         "full_width": { "type": "boolean", "label": "Full Width" },
         "variant": { "type": "string", "label": "Variant" },
-        "left_title": { "type": "string", "label": "Left Title" },
         "left_content": { "type": "rich-text", "label": "Left Content" },
-        "right_title": { "type": "string", "label": "Right Title" },
         "right_content": { "type": "rich-text", "label": "Right Content" }
       }
     },
     {
       "type": "cta",
       "fields": {
-        "title": { "type": "string", "label": "Title", "required": true },
-        "description": { "type": "string", "label": "Description" },
+        "content": { "type": "rich-text", "label": "Content", "required": true },
         "button": {
           "type": "object",
           "label": "Button",

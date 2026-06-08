@@ -1,5 +1,6 @@
 ---
 layout: design-system-base.html
+name: About
 meta_title: About Daniel Keenan | Keen On Driving
 meta_description: Meet Daniel Keenan, your qualified driving instructor in
   Rossendale. Trained by Express Driver Training and mentored by Scan School of
@@ -9,11 +10,13 @@ eleventyNavigation:
   order: 2
 blocks:
   - type: hero
-    title: About Keen On Driving
+    name: About Keen On Driving
     lead: Meet Daniel Keenan, your qualified driving instructor in Rossendale.
   - type: split-html
-    title: Daniel's Journey
     content: >-
+      ## Daniel's Journey
+
+
       Keen On Driving was established by Daniel Keenan at the beginning of 2026.
       Having previously trained to be a history teacher, Daniel soon discovered
       that his main motivation was with one-to-one teaching within the moving
@@ -32,8 +35,10 @@ blocks:
       for one-to-one teaching</p></div>'
     reverse: false
   - type: split-html
-    title: Training & Mentorship
     content: >-
+      ## Training & Mentorship
+
+
       Linda Edwards has a wealth of experience in teaching potential driving
       instructors and uses a mixture of teaching techniques including
       observations of her pupils' lessons, one-to-one classroom sessions, group
@@ -59,8 +64,10 @@ blocks:
     reverse: true
   - type: split-full
     variant: dark-left
-    left_title: Teaching All Abilities
     left_content: >-
+      ## Teaching All Abilities
+
+
       With Scan School of Motoring, Daniel gained experience teaching a wide
       variety of pupils:
 
@@ -79,8 +86,10 @@ blocks:
 
       Daniel is happy to take each lesson at a pace suited to each individual
       pupil.
-    right_title: Finding the Balance
     right_content: >-
+      ## Finding the Balance
+
+
       Daniel understands that all pupils learn differently.
 
 
@@ -92,9 +101,10 @@ blocks:
       met at that middle point — below over-confidence but with enough
       self-belief in their ability.
   - type: cta
-    title: Ready to Get Started?
-    description: Whether you're a complete beginner or looking to build on previous
-      experience, Daniel will tailor lessons to suit you.
+    content: |
+      ## Ready to Get Started?
+
+      Whether you're a complete beginner or looking to build on previous experience, Daniel will tailor lessons to suit you.
     button:
       text: View Prices
       href: /prices/

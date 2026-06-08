@@ -1,5 +1,6 @@
 ---
 layout: design-system-base.html
+name: Student Photos
 meta_title: Student Photos | Keen On Driving
 meta_description: Photos of Keen On Driving students celebrating their driving test passes. See the smiling faces of learners taught by Daniel Keenan ADI.
 eleventyNavigation:
@@ -7,7 +8,7 @@ eleventyNavigation:
   order: 5
 blocks:
   - type: hero
-    title: Student Photos
+    name: Student Photos
     lead: >-
       A gallery of Keen On Driving students celebrating their successes. Well done to everyone!
 
@@ -44,8 +45,10 @@ blocks:
         caption: "Lennon"
 
   - type: cta
-    title: Ready to Be Our Next Success Story?
-    description: Get in touch to book your first lesson with Daniel.
+    content: |
+      ## Ready to Be Our Next Success Story?
+
+      Get in touch to book your first lesson with Daniel.
     button:
       text: Get in Touch
       href: /contact/

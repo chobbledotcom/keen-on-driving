@@ -5,14 +5,14 @@
       "type": "hero",
       "fields": {
         "full_width": { "type": "boolean", "label": "Full Width" },
-        "title": { "type": "string", "label": "Title", "required": true },
+        "name": { "type": "string", "label": "Name", "required": true },
         "lead": { "type": "string", "label": "Lead Text" }
       }
     },
     {
       "type": "features",
       "fields": {
-        "header_intro": { "type": "rich-text", "label": "Header Intro" },
+        "intro_content": { "type": "rich-text", "label": "Intro Content" },
         "grid_class": { "type": "string", "label": "Grid Class" },
         "items": {
           "type": "object",
@@ -20,7 +20,7 @@
           "label": "Features",
           "fields": {
             "icon": { "type": "string", "label": "Icon (Iconify ID or HTML entity)" },
-            "title": { "type": "string", "label": "Title", "required": true },
+            "name": { "type": "string", "label": "Name", "required": true },
             "description": { "type": "string", "label": "Description", "required": true }
           }
         }
@@ -30,14 +30,14 @@
       "type": "features",
       "fields": {
         "section_class": { "type": "string", "label": "Section Class" },
-        "header_intro": { "type": "rich-text", "label": "Header Intro" },
+        "intro_content": { "type": "rich-text", "label": "Intro Content" },
         "items": {
           "type": "object",
           "list": true,
           "label": "Features",
           "fields": {
             "icon": { "type": "string", "label": "Icon (Iconify ID or HTML entity)" },
-            "title": { "type": "string", "label": "Title", "required": true },
+            "name": { "type": "string", "label": "Name", "required": true },
             "description": { "type": "string", "label": "Description", "required": true }
           }
         }
@@ -60,8 +60,7 @@
     {
       "type": "cta",
       "fields": {
-        "title": { "type": "string", "label": "Title", "required": true },
-        "description": { "type": "string", "label": "Description" },
+        "content": { "type": "rich-text", "label": "Content", "required": true },
         "button": {
           "type": "object",
           "label": "Button",

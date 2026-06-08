@@ -10,7 +10,7 @@
     {
       "type": "icon_links",
       "fields": {
-        "intro": { "type": "markdown", "label": "Intro Content (Markdown)" },
+        "intro_content": { "type": "markdown", "label": "Intro Content (Markdown)" },
         "items": {
           "type": "object",
           "list": true,

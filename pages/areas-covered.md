@@ -1,5 +1,6 @@
 ---
 layout: design-system-base.html
+name: Areas Covered
 meta_title: Areas Covered | Keen On Driving
 meta_description: Driving lessons in Rawtenstall, Crawshawbooth, Waterfoot, Haslingden, and Helmshore. Covering Rossendale and BB4 postcodes in Lancashire.
 eleventyNavigation:
@@ -7,33 +8,33 @@ eleventyNavigation:
   order: 3
 blocks:
   - type: hero
-    title: Areas Covered
+    name: Areas Covered
     lead: >-
       Keen On Driving offers manual driving lessons throughout Rossendale and the BB4 postcodes in Lancashire.
 
   - type: features
-    header_intro: |
+    intro_content: |
       ## Where We Teach
 
       Daniel covers the following areas across the Rossendale Valley
     items:
       - icon: "hugeicons:maps-location-01"
-        title: Rawtenstall
+        name: Rawtenstall
         description: The heart of Rossendale. Lessons cover town centre routes, residential areas, and connecting roads.
       - icon: "hugeicons:maps-location-01"
-        title: Crawshawbooth
+        name: Crawshawbooth
         description: Village roads and routes between Rawtenstall and Burnley, ideal for building confidence.
       - icon: "hugeicons:maps-location-01"
-        title: Waterfoot
+        name: Waterfoot
         description: Including the upper valley roads and routes towards Bacup and Rochdale.
       - icon: "hugeicons:maps-location-01"
-        title: Haslingden
+        name: Haslingden
         description: Town centre driving, residential streets, and routes connecting to the A56 and M66.
       - icon: "hugeicons:maps-location-01"
-        title: Helmshore
+        name: Helmshore
         description: Quieter residential areas perfect for early lessons and building core skills.
       - icon: "hugeicons:maps-location-01"
-        title: BB4 Postcodes
+        name: BB4 Postcodes
         description: Full coverage across the BB4 postcode area and surrounding routes.
 
   - type: markdown
@@ -45,8 +46,9 @@ blocks:
       Exceptions can be made to both the test centre used and the time of the test, but this must be discussed with your instructor.
 
   - type: cta
-    title: Book Your First Lesson
-    description: >-
+    content: |
+      ## Book Your First Lesson
+
       Based in Rossendale? Get in touch to arrange your driving lessons with Daniel.
     button:
       text: Get in Touch

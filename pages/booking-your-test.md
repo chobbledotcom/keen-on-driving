@@ -1,5 +1,6 @@
 ---
 layout: design-system-base.html
+name: Booking Your Driving Test
 meta_title: Booking Your Driving Test | Keen On Driving
 meta_description: Important information about booking your driving test with Keen On Driving. Tests at Nelson Driving Test Centre, Monday to Friday.
 eleventyNavigation:
@@ -7,14 +8,15 @@ eleventyNavigation:
   order: 5
 blocks:
   - type: hero
-    title: Booking Your Driving Test
+    name: Booking Your Driving Test
     lead: >-
       Important information about booking your practical driving test when learning with Keen On Driving.
 
   - type: split-full
     variant: dark-left
-    left_title: Before You Book
     left_content: |
+      ## Before You Book
+
       Driving tests must only be booked **alongside agreement with your driving instructor**.
 
       Your driving instructor cannot be held responsible for any tests booked where:
@@ -23,8 +25,9 @@ blocks:
       - A test is booked for a date when your instructor **does not agree that you will be ready**
 
       Please always discuss test booking with Daniel before arranging your test date.
-    right_title: Test Centre & Availability
     right_content: |
+      ## Test Centre & Availability
+
       Your instructor uses **Nelson Driving Test Centre** and is generally available for tests:
 
       - **Monday to Friday**
@@ -33,8 +36,9 @@ blocks:
       Exceptions can be made to both the test centre used and the time of the test, however this **must be discussed** with your instructor beforehand.
 
   - type: cta
-    title: Questions About Your Test?
-    description: >-
+    content: |
+      ## Questions About Your Test?
+
       If you're unsure about when to book your test or have any questions, get in touch and Daniel will be happy to help.
     button:
       text: Get in Touch

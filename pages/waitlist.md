@@ -1,5 +1,6 @@
 ---
 layout: design-system-base.html
+name: Join the Waitlist
 meta_title: Join the Waitlist | Keen On Driving
 meta_description: Spaces for driving lessons are limited. Join the Keen On Driving
   waitlist to secure your place for manual driving lessons in Rossendale.
@@ -9,13 +10,15 @@ eleventyNavigation:
   order: 7
 blocks:
   - type: hero
-    title: Join the Waitlist
+    name: Join the Waitlist
     lead: Spaces for driving lessons are limited and fill up quickly. Join the
       waitlist to be first in line when a slot becomes available. Pop your details
       in below and we'll be in touch as soon as we can fit you in.
   - type: split-html
-    title: Reserve Your Place
     content: >-
+      ## Reserve Your Place
+
+
       Demand for lessons is high, so there may be a short wait before we can get
       you started. Joining the waitlist is the best way to make sure you don't
       miss out.
