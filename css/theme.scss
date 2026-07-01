@@ -11,6 +11,11 @@
    borders are bottom/underline accents rather than side rules.
    ========================================================================== */
 
+/* Cross-document view transitions on same-origin navigations. */
+@view-transition {
+  navigation: auto;
+}
+
 /* ---------- Fonts (mirrored locally from bunny.net) ---------------------- */
 
 @font-face {
