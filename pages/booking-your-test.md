@@ -7,8 +7,9 @@ eleventyNavigation:
   order: 5
 blocks:
   - type: hero
-    name: Booking Your Driving Test
-    lead: >-
+    content: |
+      # Booking Your Driving Test
+
       Important information about booking your practical driving test when learning with Keen On Driving.
 
   - type: split-full

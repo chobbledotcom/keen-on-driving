@@ -11,11 +11,10 @@ eleventyNavigation:
 blocks:
   - type: hero
     class: gradient
-    name: Manual Driving Lessons in Rossendale
-    lead:
-      Patient, professional driving instruction throughout Rossendale and the
-      BB4 postcodes. Learn to drive with a driving instructor who understands
-      your needs.
+    content: |
+      # Manual Driving Lessons in Rossendale
+
+      Patient, professional driving instruction throughout Rossendale and the BB4 postcodes. Learn to drive with a driving instructor who understands your needs.
     buttons:
       - text: View Prices
         href: /prices/

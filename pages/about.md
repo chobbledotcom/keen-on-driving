@@ -9,8 +9,10 @@ eleventyNavigation:
   order: 2
 blocks:
   - type: hero
-    name: About Keen On Driving
-    lead: Meet Daniel Keenan, your qualified driving instructor in Rossendale.
+    content: |
+      # About Keen On Driving
+
+      Meet Daniel Keenan, your qualified driving instructor in Rossendale.
   - type: split-html
     content: >-
       ## Daniel's Journey

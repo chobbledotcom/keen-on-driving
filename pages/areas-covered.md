@@ -7,8 +7,9 @@ eleventyNavigation:
   order: 3
 blocks:
   - type: hero
-    name: Areas Covered
-    lead: >-
+    content: |
+      # Areas Covered
+
       Keen On Driving offers manual driving lessons throughout Rossendale and the BB4 postcodes in Lancashire.
 
   - type: features
