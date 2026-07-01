@@ -78,7 +78,7 @@ blocks:
       variant: secondary
     figure_html: '<div style="background: linear-gradient(135deg,
       var(--k-petrol-deep) 0%, var(--k-petrol) 100%); padding: 3rem;
-      text-align: center; color: #fff; border-radius: 14px;"><div
+      text-align: center; color: #fff; border-radius: 2px;"><div
       style="font-size: 4rem; margin-bottom: 1rem;">🚗</div><strong
       style="font-size: 1.5rem;">Daniel Keenan ADI</strong><p style="opacity:
       0.85; margin: 0.5rem 0 0;">Your patient, qualified driving

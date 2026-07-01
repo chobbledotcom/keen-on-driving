@@ -30,7 +30,7 @@ blocks:
       Without their help none of this would have been possible!
     figure_html: '<div style="background: linear-gradient(135deg,
       var(--k-petrol-deep) 0%, var(--k-petrol) 100%); padding: 3rem;
-      text-align: center; color: #fff; border-radius: 14px;"><div
+      text-align: center; color: #fff; border-radius: 2px;"><div
       style="font-size: 4rem; margin-bottom: 1rem;">🎓</div><strong
       style="font-size: 1.5rem;">From Teacher to Instructor</strong><p
       style="opacity: 0.85; margin: 0.5rem 0 0;">A passion for one-to-one
@@ -59,7 +59,7 @@ blocks:
       now passes on to his pupils to give them every chance of success.
     figure_html: '<div style="background: linear-gradient(135deg,
       var(--k-marigold-deep) 0%, var(--k-marigold) 100%); padding: 3rem;
-      text-align: center; color: var(--k-ink); border-radius: 14px;"><div
+      text-align: center; color: var(--k-ink); border-radius: 2px;"><div
       style="font-size: 4rem; margin-bottom: 1rem;">🏆</div><strong
       style="font-size: 1.5rem;">ADI Qualified</strong><p style="opacity: 0.85;
       margin: 0.5rem 0 0;">Among the top 35% nationally</p></div>'

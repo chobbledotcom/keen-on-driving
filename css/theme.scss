@@ -78,7 +78,7 @@
   --k-surface: #ffffff;
   --k-line: #e7ddca;
   --k-shadow: 0 20px 40px -26px rgba(10, 61, 66, 0.55);
-  --k-radius: 14px;
+  --k-radius: 2px;
 
   /* Fonts */
   --font-family-heading: "Bricolage Grotesque", "Hanken Grotesk", sans-serif;
@@ -136,20 +136,29 @@ body::before {
   letter-spacing: -0.035em;
 }
 
-/* Short marigold rule under section headings — an "occasional border" ------ */
+/* Marigold rule under section headings, sized to the text itself.
+   Shrinking the heading to fit-content makes the full-width ::after equal the
+   text width. In flex-centred blocks (.cta) align-items already centres the
+   shrunk heading; for text-align-centred blocks that don't (section headers,
+   inline-centred content) we re-centre with margin-inline. */
+.design-system h2 {
+  width: fit-content;
+  max-width: 100%;
+}
+
 .design-system h2::after {
   content: "";
   display: block;
-  width: 2.75rem;
+  width: 100%;
   height: 4px;
-  margin-top: 0.6rem;
-  border-radius: 4px;
+  margin-top: 0.55rem;
+  border-radius: 2px;
   background: linear-gradient(90deg, var(--k-marigold), var(--k-marigold-deep));
 }
 
-/* Centre the rule when the heading itself is centred (hero, cta, features) */
-.design-system :is(.hero, .cta, .features, .stats, [style*="text-align: center"])
-  h2::after {
+.design-system .section-header h2,
+.design-system [style*="text-align: center"] h2,
+.design-system [style*="text-align:center"] h2 {
   margin-inline: auto;
 }
 
@@ -216,7 +225,7 @@ body::before {
 }
 
 .design-system img {
-  border-radius: 10px;
+  border-radius: var(--k-radius);
 }
 
 /* Marigold pop on the footer's petrol band, legible light links ----------- */
