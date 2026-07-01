@@ -1,16 +1,14 @@
 @charset "utf-8";
-@use "sass:color";
 
 /* ==========================================================================
-   Keen On Driving — theme overrides
-   Layered on top of the chobble-template base styles. Everything here targets
-   guaranteed semantic elements or our own namespaced tokens, so it enhances
-   the template without depending on its internal class names.
+   Keen On Driving — theme overrides for chobble-template
+   Re-colours the design system through its own CSS custom properties, swaps in
+   a mirrored font pairing, and adds restrained motion/texture/borders.
 
-   Design language: "petrol & marigold" — a confident deep-teal grounded by a
-   warm high-visibility amber, set on warm paper with a faint grain. Motion is
-   scroll-reveal + drawn underlines rather than the usual hover-zoom; borders
-   are bottom/underline accents rather than the usual left rule.
+   Design language: "petrol & marigold" — a confident deep-teal as the primary
+   interactive colour, a warm high-vis amber as the accent, on warm paper.
+   Motion is limited to background drift + hover feedback (never hides content);
+   borders are bottom/underline accents rather than side rules.
    ========================================================================== */
 
 /* ---------- Fonts (mirrored locally from bunny.net) ---------------------- */
@@ -65,77 +63,81 @@
   font-display: swap;
 }
 
-/* ---------- Design tokens ------------------------------------------------ */
+/* ---------- Palette tokens + template variable overrides ----------------- */
 
 :root {
-  /* Palette */
-  --k-ink: #17262d;
-  --k-ink-soft: #3f5158;
   --k-petrol: #0f5c63;
-  --k-petrol-bright: #128089;
+  --k-petrol-bright: #12808a;
   --k-petrol-deep: #0a3d42;
   --k-marigold: #f5a623;
-  --k-marigold-bright: #ffbb3d;
+  --k-marigold-bright: #ffb845;
   --k-marigold-deep: #d5850c;
-  --k-paper: #f8f4ec;
+  --k-ink: #17262d;
+  --k-paper: #f7f2e9;
+  --k-paper-alt: #efe7d6;
   --k-surface: #ffffff;
-  --k-line: #e6ddcb;
-
-  --k-shadow: 12px 14px 0 rgba(15, 92, 99, 0.08);
-  --k-shadow-lift: 10px 12px 0 rgba(213, 133, 12, 0.18);
+  --k-line: #e7ddca;
+  --k-shadow: 0 20px 40px -26px rgba(10, 61, 66, 0.55);
   --k-radius: 14px;
 
-  /* Fonts — --font-family-heading is read by the template base styles */
+  /* Fonts */
   --font-family-heading: "Bricolage Grotesque", "Hanken Grotesk", sans-serif;
-  --k-font-body: "Hanken Grotesk", system-ui, sans-serif;
+  --font-family-body: "Hanken Grotesk", system-ui, sans-serif;
+
+  /* Surfaces & text */
+  --color-bg: var(--k-paper);
+  --body-background: var(--k-paper);
+  --body-background-alt: var(--k-paper-alt);
+  --color-card-bg: var(--k-surface);
+  --color-text: var(--k-ink);
+  --color-text-muted: #55666d;
+
+  /* Interactive — drives links, list markers, primary/secondary buttons */
+  --color-link: var(--k-petrol);
+  --color-link-hover: var(--k-petrol-deep);
+  --color-tint: #d8e8e9;
+  --color-secondary: var(--k-marigold);
+  --color-accent: var(--k-paper-alt);
+  --color-hover-bg: rgba(15, 92, 99, 0.06);
+  --list-marker-color: var(--k-marigold);
+
+  /* Dark sections + footer */
+  --color-dark-bg: var(--k-petrol-deep);
+  --color-dark-bg-alt: #073234;
+  --color-contrast-text: #ffffff;
+  --color-contrast-text-muted: rgba(255, 255, 255, 0.82);
+
+  /* Hero gradient tint */
+  --color-gradient-start: rgba(15, 92, 99, 0.16);
+  --color-gradient-end: rgba(245, 166, 35, 0.22);
+
+  --border-radius: var(--k-radius);
 }
 
-/* Faint grain overlay — warmth without a literal dot/line grid ------------- */
+/* Faint grain — warmth without a literal dot/line grid -------------------- */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.04;
+  opacity: 0.035;
   mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* ---------- Base typography & colour ------------------------------------- */
+/* ---------- Headings ----------------------------------------------------- */
 
-body {
-  font-family: var(--k-font-body);
-  color: var(--k-ink);
-  background-color: var(--k-paper);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-family-heading);
-  color: var(--k-petrol-deep);
+.design-system :is(h1, h2, h3) {
   letter-spacing: -0.02em;
-  line-height: 1.08;
-  text-wrap: balance;
 }
 
-h1 {
-  font-weight: 800;
+.design-system h1 {
   letter-spacing: -0.035em;
 }
 
-h2 {
-  font-weight: 800;
-}
-
 /* Short marigold rule under section headings — an "occasional border" ------ */
-h2::after {
+.design-system h2::after {
   content: "";
   display: block;
   width: 2.75rem;
@@ -145,105 +147,55 @@ h2::after {
   background: linear-gradient(90deg, var(--k-marigold), var(--k-marigold-deep));
 }
 
-strong,
-b {
-  font-weight: 700;
-  color: var(--k-petrol-deep);
+/* Centre the rule when the heading itself is centred (hero, cta, features) */
+.design-system :is(.hero, .cta, .features, .stats, [style*="text-align: center"])
+  h2::after {
+  margin-inline: auto;
 }
 
-/* ---------- Links: a drawn underline rather than a colour flip ----------- */
+/* ---------- Links: warm underline on hover ------------------------------- */
 
-a {
-  color: var(--k-petrol);
-  text-decoration: none;
-  background-image: linear-gradient(var(--k-marigold), var(--k-marigold));
-  background-repeat: no-repeat;
-  background-position: 0 100%;
-  background-size: 0% 2px;
-  transition:
-    background-size 0.28s ease,
-    color 0.2s ease;
+.design-system a:not(.btn):hover {
+  text-decoration-color: var(--k-marigold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
-a:hover,
-a:focus-visible {
-  color: var(--k-petrol-deep);
-  background-size: 100% 2px;
-}
+/* ---------- Buttons: marigold primary CTA, petrol secondary -------------- */
 
-:focus-visible {
-  outline: 3px solid var(--k-marigold);
-  outline-offset: 2px;
-  border-radius: 3px;
-}
-
-/* ---------- Buttons ------------------------------------------------------- */
-
-a.button,
-.button,
-button,
-input[type="submit"] {
-  font-family: var(--font-family-heading);
-  font-weight: 600;
-  letter-spacing: 0.005em;
-  border-radius: 999px;
-  background-image: none;
-  border: 2px solid transparent;
-  transition:
-    transform 0.12s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease,
-    border-color 0.2s ease;
-}
-
-a.button:hover,
-.button:hover,
-button:hover,
-input[type="submit"]:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--k-shadow-lift);
-}
-
-a.button:active,
-.button:active,
-button:active,
-input[type="submit"]:active {
-  transform: translateY(0);
-  box-shadow: none;
-}
-
-/* Primary / secondary variants emitted by the template's button blocks ----- */
-.button.primary,
-a.button.primary,
-.primary > a.button {
-  background-color: var(--k-marigold);
-  border-color: var(--k-marigold);
+.design-system .btn--primary {
+  background: var(--k-marigold);
   color: var(--k-ink);
+  box-shadow: 0 2px 0 var(--k-marigold-deep);
 }
 
-.button.primary:hover,
-a.button.primary:hover {
-  background-color: var(--k-marigold-bright);
-  border-color: var(--k-marigold-bright);
+.design-system .btn--primary:hover:not(:disabled) {
+  background: var(--k-marigold-bright);
+  color: var(--k-ink);
+  box-shadow: 0 6px 16px -4px rgba(213, 133, 12, 0.55);
 }
 
-.button.secondary,
-a.button.secondary {
-  background-color: transparent;
-  border-color: var(--k-petrol);
+/* ---------- Feature cards: marigold bottom accent ------------------------ */
+
+.design-system .feature {
+  border-bottom: 3px solid var(--k-marigold);
+}
+
+/* ---------- Stats: framed band, display-font figures -------------------- */
+
+.design-system dl.stats {
+  padding-block: 1.6rem;
+  border-block: 2px dashed var(--k-line);
+}
+
+.design-system .stat dd strong {
+  font-family: var(--font-family-heading);
   color: var(--k-petrol-deep);
-}
-
-.button.secondary:hover,
-a.button.secondary:hover {
-  background-color: var(--k-petrol);
-  border-color: var(--k-petrol);
-  color: #fff;
 }
 
 /* ---------- Rules, quotes, media ----------------------------------------- */
 
-hr {
+.design-system hr {
   border: none;
   height: 3px;
   background: repeating-linear-gradient(
@@ -251,61 +203,54 @@ hr {
     var(--k-petrol) 0 22px,
     transparent 22px 40px
   );
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
-blockquote {
+.design-system blockquote {
   border-left: none;
   border-bottom: 3px solid var(--k-marigold);
   background: var(--k-surface);
   border-radius: var(--k-radius) var(--k-radius) 0 0;
   padding: 1.1rem 1.35rem;
   box-shadow: var(--k-shadow);
-  font-style: normal;
 }
 
-img {
+.design-system img {
   border-radius: 10px;
 }
 
-/* ---------- Footer framing ----------------------------------------------- */
+/* Marigold pop on the footer's petrol band, legible light links ----------- */
+.design-system footer {
+  border-top: 4px solid var(--k-marigold);
+}
 
-footer,
-body > footer {
-  border-top: 4px solid var(--k-petrol-deep);
+.design-system footer a:not(.btn) {
+  color: var(--color-contrast-text);
+}
+
+.design-system footer a:not(.btn):hover {
+  color: var(--k-marigold-bright);
+  text-decoration-color: var(--k-marigold-bright);
 }
 
 /* ==========================================================================
-   Motion
-   Scroll-reveal via the modern scroll-driven-animations API. Progressive
-   enhancement only: where unsupported, content is simply shown. Fully
-   disabled under prefers-reduced-motion.
+   Motion — background drift only, so content is never hidden. The template's
+   own [data-reveal] handles scroll entrances; we don't touch it. Disabled
+   under prefers-reduced-motion.
    ========================================================================== */
 
-@keyframes k-rise {
-  from {
-    opacity: 0;
-    transform: translateY(26px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
-  @supports (animation-timeline: view()) {
-    main > *,
-    section,
-    article,
-    .hero,
-    .features,
-    .stats,
-    .cta,
-    .split {
-      animation: k-rise linear both;
-      animation-timeline: view();
-      animation-range: entry 2% cover 22%;
+  .design-system .hero.gradient {
+    background-size: 180% 180%;
+    animation: k-drift 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes k-drift {
+    from {
+      background-position: 0% 50%;
+    }
+    to {
+      background-position: 100% 50%;
     }
   }
 }
