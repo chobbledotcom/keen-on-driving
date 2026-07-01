@@ -11,5 +11,6 @@
   "template_repo_url": null,
   "chobble_link": null,
   "currency": "GBP",
-  "search_collections": ["pages"]
+  "search_collections": ["pages"],
+  "homepage_footer_markdown": "Site by [chobble.com](https://chobble.com)"
 }
