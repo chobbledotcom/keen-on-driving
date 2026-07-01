@@ -1,29 +1,304 @@
 @charset "utf-8";
-@use "sass:color";
+
+/* ==========================================================================
+   Keen On Driving — theme overrides for chobble-template
+   Re-colours the design system through its own CSS custom properties, swaps in
+   a mirrored font pairing, and adds restrained motion/texture/borders.
+
+   Design language: "petrol & marigold" — a confident deep-teal as the primary
+   interactive colour, a warm high-vis amber as the accent, on warm paper.
+   Motion is limited to background drift + hover feedback (never hides content);
+   borders are bottom/underline accents rather than side rules.
+   ========================================================================== */
+
+/* Cross-document view transitions on same-origin navigations. */
+@view-transition {
+  navigation: auto;
+}
+
+/* ---------- Fonts (mirrored locally from bunny.net) ---------------------- */
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Bricolage Grotesque";
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url("/assets/fonts/bricolage-grotesque-latin-600-normal.woff2") format("woff2"),
+    url("/assets/fonts/bricolage-grotesque-latin-600-normal.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  font-style: normal;
+  font-weight: 800;
+  src:
+    url("/assets/fonts/bricolage-grotesque-latin-800-normal.woff2") format("woff2"),
+    url("/assets/fonts/bricolage-grotesque-latin-800-normal.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
   font-style: normal;
   font-weight: 400;
   src:
-    url("/assets/fonts/montserrat-latin-400-normal.woff2") format("woff2"),
-    url("/assets/fonts/montserrat-latin-400-normal.woff") format("woff");
+    url("/assets/fonts/hanken-grotesk-latin-400-normal.woff2") format("woff2"),
+    url("/assets/fonts/hanken-grotesk-latin-400-normal.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Hanken Grotesk";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   src:
-    url("/assets/fonts/montserrat-latin-700-normal.woff2") format("woff2"),
-    url("/assets/fonts/montserrat-latin-700-normal.woff") format("woff");
+    url("/assets/fonts/hanken-grotesk-latin-500-normal.woff2") format("woff2"),
+    url("/assets/fonts/hanken-grotesk-latin-500-normal.woff") format("woff");
   font-display: swap;
 }
 
-:root {
-  --font-family-heading: "Montserrat", sans-serif;
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("/assets/fonts/hanken-grotesk-latin-700-normal.woff2") format("woff2"),
+    url("/assets/fonts/hanken-grotesk-latin-700-normal.woff") format("woff");
+  font-display: swap;
 }
+
+/* ---------- Palette tokens + template variable overrides ----------------- */
+
+:root {
+  --k-petrol: #0f5c63;
+  --k-petrol-bright: #12808a;
+  --k-petrol-deep: #0a3d42;
+  --k-marigold: #f5a623;
+  --k-marigold-bright: #ffb845;
+  --k-marigold-deep: #d5850c;
+  --k-ink: #17262d;
+  --k-paper: #f7f2e9;
+  --k-paper-alt: #efe7d6;
+  --k-surface: #ffffff;
+  --k-line: #e7ddca;
+  --k-shadow: 0 20px 40px -26px rgba(10, 61, 66, 0.55);
+  --k-radius: 2px;
+
+  /* Fonts */
+  --font-family-heading: "Bricolage Grotesque", "Hanken Grotesk", sans-serif;
+  --font-family-body: "Hanken Grotesk", system-ui, sans-serif;
+
+  /* Surfaces & text */
+  --color-bg: var(--k-paper);
+  --body-background: var(--k-paper);
+  --body-background-alt: var(--k-paper-alt);
+  --color-card-bg: var(--k-surface);
+  --color-text: var(--k-ink);
+  --color-text-muted: #55666d;
+
+  /* Interactive — drives links, list markers, primary/secondary buttons */
+  --color-link: var(--k-petrol);
+  --color-link-hover: var(--k-petrol-deep);
+  --color-tint: #d8e8e9;
+  --color-secondary: var(--k-marigold);
+  --color-accent: var(--k-paper-alt);
+  --color-hover-bg: rgba(15, 92, 99, 0.06);
+  --list-marker-color: var(--k-marigold);
+
+  /* Dark sections + footer */
+  --color-dark-bg: var(--k-petrol-deep);
+  --color-dark-bg-alt: #073234;
+  --color-contrast-text: #ffffff;
+  --color-contrast-text-muted: rgba(255, 255, 255, 0.82);
+
+  /* Hero gradient tint */
+  --color-gradient-start: rgba(15, 92, 99, 0.16);
+  --color-gradient-end: rgba(245, 166, 35, 0.22);
+
+  --border-radius: var(--k-radius);
+}
+
+/* Faint grain — warmth without a literal dot/line grid -------------------- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Headings ----------------------------------------------------- */
+
+.design-system :is(h1, h2, h3) {
+  letter-spacing: -0.02em;
+}
+
+.design-system h1 {
+  font-size: clamp(2.25rem, 1.4rem + 3vw, 3.5rem);
+  letter-spacing: -0.035em;
+}
+
+/* Marigold rule under section headings, sized to the text itself.
+   Shrinking the heading to fit-content makes the full-width ::after equal the
+   text width. In flex-centred blocks (.cta) align-items already centres the
+   shrunk heading; for text-align-centred blocks that don't (section headers,
+   inline-centred content) we re-centre with margin-inline. */
+.design-system h2 {
+  width: fit-content;
+  max-width: 100%;
+}
+
+.design-system h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: 0.55rem;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--k-marigold), var(--k-marigold-deep));
+  transform-origin: left;
+}
+
+/* Centred headings: centre the shrunk box, and grow the rule from the middle. */
+.design-system .cta h2,
+.design-system .section-header h2,
+.design-system [style*="text-align: center"] h2,
+.design-system [style*="text-align:center"] h2 {
+  margin-inline: auto;
+}
+
+.design-system .cta h2::after,
+.design-system .section-header h2::after,
+.design-system [style*="text-align: center"] h2::after,
+.design-system [style*="text-align:center"] h2::after {
+  transform-origin: center;
+}
+
+/* Draw the rule in as its heading scrolls into view — from the left when
+   left-aligned, out from the middle when centred (per transform-origin above).
+   head-scripts.html adds .k-reveal to <html> only when motion is allowed and
+   IntersectionObserver exists; it then adds .is-underlined to each heading as
+   it enters view. Without JS (or with reduced motion) the rule shows in full. */
+@media (prefers-reduced-motion: no-preference) {
+  .k-reveal .design-system h2::after {
+    transform: scaleX(0);
+    transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  .k-reveal .design-system h2.is-underlined::after {
+    transform: scaleX(1);
+  }
+}
+
+/* ---------- Links: warm underline on hover ------------------------------- */
+
+.design-system a:not(.btn):hover {
+  text-decoration-color: var(--k-marigold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Buttons: marigold primary CTA, petrol secondary -------------- */
+
+.design-system .btn--primary {
+  background: var(--k-marigold);
+  color: var(--k-ink);
+  box-shadow: 0 2px 0 var(--k-marigold-deep);
+}
+
+.design-system .btn--primary:hover:not(:disabled) {
+  background: var(--k-marigold-bright);
+  color: var(--k-ink);
+  box-shadow: 0 6px 16px -4px rgba(213, 133, 12, 0.55);
+}
+
+/* ---------- Feature cards: marigold bottom accent ------------------------ */
+
+.design-system .feature {
+  border-bottom: 3px solid var(--k-marigold);
+}
+
+/* ---------- Stats: framed band, display-font figures -------------------- */
+
+.design-system dl.stats {
+  padding-block: 1.6rem;
+  border-block: 2px dashed var(--k-line);
+}
+
+.design-system .stat dd strong {
+  font-family: var(--font-family-heading);
+  color: var(--k-petrol-deep);
+}
+
+/* ---------- Rules, quotes, media ----------------------------------------- */
+
+.design-system hr {
+  border: none;
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--k-petrol) 0 22px,
+    transparent 22px 40px
+  );
+  opacity: 0.45;
+}
+
+.design-system blockquote {
+  border-left: none;
+  border-bottom: 3px solid var(--k-marigold);
+  background: var(--k-surface);
+  border-radius: var(--k-radius) var(--k-radius) 0 0;
+  padding: 1.1rem 1.35rem;
+  box-shadow: var(--k-shadow);
+}
+
+.design-system img {
+  border-radius: var(--k-radius);
+}
+
+/* Marigold pop on the footer's petrol band, legible light links ----------- */
+.design-system footer {
+  border-top: 4px solid var(--k-marigold);
+}
+
+.design-system footer a:not(.btn) {
+  color: var(--color-contrast-text);
+}
+
+.design-system footer a:not(.btn):hover {
+  color: var(--k-marigold-bright);
+  text-decoration-color: var(--k-marigold-bright);
+}
+
+/* ==========================================================================
+   Motion — background drift only, so content is never hidden. The template's
+   own [data-reveal] handles scroll entrances; we don't touch it. Disabled
+   under prefers-reduced-motion.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  .design-system .hero.gradient {
+    background-size: 180% 180%;
+    animation: k-drift 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes k-drift {
+    from {
+      background-position: 0% 50%;
+    }
+    to {
+      background-position: 100% 50%;
+    }
+  }
+}
+
+/* ==========================================================================
+   Existing component overrides (kept from before)
+   ========================================================================== */
 
 .gallery {
   display: grid;
@@ -39,12 +314,14 @@
       width: 100%;
       height: 250px;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: var(--k-radius);
+      box-shadow: var(--k-shadow);
     }
 
     figcaption {
-      margin-top: 0.5rem;
+      margin-top: 0.6rem;
       font-weight: 600;
+      color: var(--k-petrol-deep);
     }
   }
 }

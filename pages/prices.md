@@ -8,10 +8,10 @@ eleventyNavigation:
   order: 4
 blocks:
   - type: hero
-    name: Prices
-    lead:
-      All lessons are 1.5 hours or 2 hours long. Save money with block bookings
-      — the more hours you book, the less you pay per hour.
+    content: |
+      # Prices
+
+      All lessons are 1.5 hours or 2 hours long. Save money with block bookings — the more hours you book, the less you pay per hour.
   - type: features
     intro_content: "## Individual Lessons"
     items:

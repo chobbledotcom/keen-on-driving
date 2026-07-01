@@ -11,11 +11,10 @@ eleventyNavigation:
 blocks:
   - type: hero
     class: gradient
-    name: Manual Driving Lessons in Rossendale
-    lead:
-      Patient, professional driving instruction throughout Rossendale and the
-      BB4 postcodes. Learn to drive with a driving instructor who understands
-      your needs.
+    content: |
+      # Manual Driving Lessons in Rossendale
+
+      Patient, professional driving instruction throughout Rossendale and the BB4 postcodes. Learn to drive with a driving instructor who understands your needs.
     buttons:
       - text: View Prices
         href: /prices/
@@ -77,12 +76,13 @@ blocks:
       text: Read More About Daniel
       href: /about/
       variant: secondary
-    figure_html: '<div style="background: linear-gradient(135deg, #1e3a5f 0%,
-      #2d5a87 100%); padding: 3rem; text-align: center; color: white;
-      border-radius: 12px;"><div style="font-size: 4rem; margin-bottom:
-      1rem;">🚗</div><strong style="font-size: 1.5rem;">Daniel Keenan
-      ADI</strong><p style="opacity: 0.8; margin: 0.5rem 0 0;">Your patient,
-      qualified driving instructor</p></div>'
+    figure_html: '<div style="background: linear-gradient(135deg,
+      var(--k-petrol-deep) 0%, var(--k-petrol) 100%); padding: 3rem;
+      text-align: center; color: #fff; border-radius: 2px;"><div
+      style="font-size: 4rem; margin-bottom: 1rem;">🚗</div><strong
+      style="font-size: 1.5rem;">Daniel Keenan ADI</strong><p style="opacity:
+      0.85; margin: 0.5rem 0 0;">Your patient, qualified driving
+      instructor</p></div>'
   - type: features
     intro_content: |
       ## Areas Covered

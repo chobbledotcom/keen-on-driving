@@ -10,10 +10,10 @@ eleventyNavigation:
   order: 7
 blocks:
   - type: hero
-    name: Join the Waitlist
-    lead: Spaces for driving lessons are limited and fill up quickly. Join the
-      waitlist to be first in line when a slot becomes available. Pop your details
-      in below and we'll be in touch as soon as we can fit you in.
+    content: |
+      # Join the Waitlist
+
+      Spaces for driving lessons are limited and fill up quickly. Join the waitlist to be first in line when a slot becomes available. Pop your details in below and we'll be in touch as soon as we can fit you in.
   - type: split-html
     content: >-
       ## Reserve Your Place

@@ -7,8 +7,9 @@ eleventyNavigation:
   order: 5
 blocks:
   - type: hero
-    name: Student Photos
-    lead: >-
+    content: |
+      # Student Photos
+
       A gallery of Keen On Driving students celebrating their successes. Well done to everyone!
 
   - type: markdown

@@ -9,8 +9,10 @@ eleventyNavigation:
   order: 2
 blocks:
   - type: hero
-    name: About Keen On Driving
-    lead: Meet Daniel Keenan, your qualified driving instructor in Rossendale.
+    content: |
+      # About Keen On Driving
+
+      Meet Daniel Keenan, your qualified driving instructor in Rossendale.
   - type: split-html
     content: >-
       ## Daniel's Journey
@@ -26,12 +28,13 @@ blocks:
       received his training from Linda Edwards at Express Driver Training,
       alongside the mentorship of Andy Scanlon of Scan School of Motoring.
       Without their help none of this would have been possible!
-    figure_html: '<div style="background: linear-gradient(135deg, #1e3a5f 0%,
-      #2d5a87 100%); padding: 3rem; text-align: center; color: white;
-      border-radius: 12px;"><div style="font-size: 4rem; margin-bottom:
-      1rem;">🎓</div><strong style="font-size: 1.5rem;">From Teacher to
-      Instructor</strong><p style="opacity: 0.8; margin: 0.5rem 0 0;">A passion
-      for one-to-one teaching</p></div>'
+    figure_html: '<div style="background: linear-gradient(135deg,
+      var(--k-petrol-deep) 0%, var(--k-petrol) 100%); padding: 3rem;
+      text-align: center; color: #fff; border-radius: 2px;"><div
+      style="font-size: 4rem; margin-bottom: 1rem;">🎓</div><strong
+      style="font-size: 1.5rem;">From Teacher to Instructor</strong><p
+      style="opacity: 0.85; margin: 0.5rem 0 0;">A passion for one-to-one
+      teaching</p></div>'
     reverse: false
   - type: split-html
     content: >-
@@ -54,12 +57,12 @@ blocks:
       passing the final test nationally, it was challenging at times, but Andy
       always found a way to keep Daniel motivated. These are experiences Daniel
       now passes on to his pupils to give them every chance of success.
-    figure_html: |-
-      🏆
-
-      **ADI Qualified**
-
-      Among the top 35% nationally
+    figure_html: '<div style="background: linear-gradient(135deg,
+      var(--k-marigold-deep) 0%, var(--k-marigold) 100%); padding: 3rem;
+      text-align: center; color: var(--k-ink); border-radius: 2px;"><div
+      style="font-size: 4rem; margin-bottom: 1rem;">🏆</div><strong
+      style="font-size: 1.5rem;">ADI Qualified</strong><p style="opacity: 0.85;
+      margin: 0.5rem 0 0;">Among the top 35% nationally</p></div>'
     reverse: true
   - type: split-full
     variant: dark-left
