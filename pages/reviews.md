@@ -9,7 +9,7 @@ eleventyNavigation:
 blocks:
   - type: section-header
     intro: |
-      ## Customer Feedback
+      # Customer Feedback
 
       Check out the reviews from some of our lovely students below!
   - type: reviews

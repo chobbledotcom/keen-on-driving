@@ -138,6 +138,7 @@ body::before {
 }
 
 .design-system h1 {
+  font-size: clamp(2.25rem, 1.4rem + 3vw, 3.5rem);
   letter-spacing: -0.035em;
 }
 
@@ -179,23 +180,16 @@ body::before {
 
 /* Draw the rule in as its heading scrolls into view — from the left when
    left-aligned, out from the middle when centred (per transform-origin above).
-   Progressive enhancement: only the accent bar animates, never the text;
-   unsupported browsers and reduced-motion just show it in full. */
+   head-scripts.html adds .k-reveal to <html> only when motion is allowed and
+   IntersectionObserver exists; it then adds .is-underlined to each heading as
+   it enters view. Without JS (or with reduced motion) the rule shows in full. */
 @media (prefers-reduced-motion: no-preference) {
-  @supports (animation-timeline: view()) {
-    .design-system h2::after {
-      animation: k-underline-draw linear both;
-      animation-timeline: view();
-      animation-range: entry 8% cover 32%;
-    }
-  }
-}
-
-@keyframes k-underline-draw {
-  from {
+  .k-reveal .design-system h2::after {
     transform: scaleX(0);
+    transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
-  to {
+
+  .k-reveal .design-system h2.is-underlined::after {
     transform: scaleX(1);
   }
 }

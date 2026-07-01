@@ -8,7 +8,7 @@ no_index: true
 blocks:
   - type: markdown
     content: |
-      ## Thank You
+      # Thank You
 
       Your message has been sent - we will be in touch.
 ---

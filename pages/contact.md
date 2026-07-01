@@ -8,7 +8,7 @@ eleventyNavigation:
 blocks:
   - type: contact-form
     content: |
-      ## Contact Keen On Driving
+      # Contact Keen On Driving
 
       Use the form to get in touch with Daniel about booking lessons, asking questions, or anything else.
 
