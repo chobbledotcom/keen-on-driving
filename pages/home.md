@@ -1,6 +1,5 @@
 ---
 permalink: /
-layout: design-system-base.html
 name: Home
 meta_title: Keen On Driving | Manual Driving Lessons in Rossendale
 meta_description: Manual driving lessons throughout Rossendale and BB4
@@ -13,7 +12,8 @@ blocks:
   - type: hero
     class: gradient
     name: Manual Driving Lessons in Rossendale
-    lead: Patient, professional driving instruction throughout Rossendale and the
+    lead:
+      Patient, professional driving instruction throughout Rossendale and the
       BB4 postcodes. Learn to drive with a driving instructor who understands
       your needs.
     buttons:
@@ -33,16 +33,19 @@ blocks:
     items:
       - icon: hugeicons:user-multiple
         name: Patient & Adaptable
-        description: Experience teaching pupils of all abilities, including those with
+        description:
+          Experience teaching pupils of all abilities, including those with
           anxiety, ADHD, and autism. Every lesson is taken at a pace that suits
           you best.
       - icon: hugeicons:car-01
         name: Qualified ADI
-        description: Fully qualified Approved Driving Instructor with training from
+        description:
+          Fully qualified Approved Driving Instructor with training from
           Express Driver Training and mentorship from Scan School of Motoring.
       - icon: hugeicons:money-bag-02
         name: Block Booking Discounts
-        description: Save money with block bookings from 10 to 40 hours. The more you
+        description:
+          Save money with block bookings from 10 to 40 hours. The more you
           book, the less you pay per hour.
   - type: stats
     items:

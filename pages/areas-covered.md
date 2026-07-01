@@ -1,5 +1,4 @@
 ---
-layout: design-system-base.html
 name: Areas Covered
 meta_title: Areas Covered | Keen On Driving
 meta_description: Driving lessons in Rawtenstall, Crawshawbooth, Waterfoot, Haslingden, and Helmshore. Covering Rossendale and BB4 postcodes in Lancashire.

@@ -1,5 +1,4 @@
 ---
-layout: design-system-base.html
 name: Contact
 meta_title: Contact | Keen On Driving
 meta_description: Get in touch with Keen On Driving to book driving lessons in Rossendale. Contact Daniel Keenan for manual driving instruction.

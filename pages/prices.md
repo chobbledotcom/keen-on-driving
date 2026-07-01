@@ -1,5 +1,4 @@
 ---
-layout: design-system-base.html
 name: Prices
 meta_title: Prices | Keen On Driving
 meta_description: Driving lesson prices in Rossendale. 2-hour lessons from £70.
@@ -10,18 +9,21 @@ eleventyNavigation:
 blocks:
   - type: hero
     name: Prices
-    lead: All lessons are 1.5 hours or 2 hours long. Save money with block bookings
+    lead:
+      All lessons are 1.5 hours or 2 hours long. Save money with block bookings
       — the more hours you book, the less you pay per hour.
   - type: features
     intro_content: "## Individual Lessons"
     items:
       - icon: hugeicons:star
         name: Starter Lesson
-        description: £70 for a 2-hour introductory lesson. A great way to get started
+        description:
+          £70 for a 2-hour introductory lesson. A great way to get started
           and see if we're a good fit.
       - icon: hugeicons:car-01
         name: Standard Lesson
-        description: £80 for a 2-hour lesson. Regular lessons to build your skills and
+        description:
+          £80 for a 2-hour lesson. Regular lessons to build your skills and
           confidence on the road.
   - type: features
     intro_content: |
@@ -31,7 +33,8 @@ blocks:
     items:
       - icon: hugeicons:time-02
         name: 10 Hours
-        description: £380 total (£38 per hour). A good starting point for those with
+        description:
+          £380 total (£38 per hour). A good starting point for those with
           some or no previous experience.
       - icon: hugeicons:time-02
         name: 20 Hours
@@ -39,11 +42,13 @@ blocks:
           building on existing skills and working towards test readiness.
       - icon: hugeicons:time-02
         name: 30 Hours
-        description: £1,080 total (£36 per hour). Suited to those who have had lessons
+        description:
+          £1,080 total (£36 per hour). Suited to those who have had lessons
           before and want to get test ready.
       - icon: hugeicons:time-02
         name: 40 Hours
-        description: £1,400 total (£35 per hour). Suited to complete beginners with no
+        description:
+          £1,400 total (£35 per hour). Suited to complete beginners with no
           previous driving experience.
   - type: stats
     items:

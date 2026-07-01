@@ -1,8 +1,8 @@
 ---
-layout: design-system-base.html
 name: Join the Waitlist
 meta_title: Join the Waitlist | Keen On Driving
-meta_description: Spaces for driving lessons are limited. Join the Keen On Driving
+meta_description:
+  Spaces for driving lessons are limited. Join the Keen On Driving
   waitlist to secure your place for manual driving lessons in Rossendale.
 permalink: /waitlist/
 eleventyNavigation:

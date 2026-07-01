@@ -1,5 +1,4 @@
 ---
-layout: design-system-base.html
 name: Student Photos
 meta_title: Student Photos | Keen On Driving
 meta_description: Photos of Keen On Driving students celebrating their driving test passes. See the smiling faces of learners taught by Daniel Keenan ADI.

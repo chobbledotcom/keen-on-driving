@@ -1,7 +1,6 @@
 ---
 header_text: Not Found
 name: Not Found
-layout: design-system-base.html
 meta_description:
 meta_title: Not Found
 no_index: true

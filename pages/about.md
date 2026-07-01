@@ -1,5 +1,4 @@
 ---
-layout: design-system-base.html
 name: About
 meta_title: About Daniel Keenan | Keen On Driving
 meta_description: Meet Daniel Keenan, your qualified driving instructor in
