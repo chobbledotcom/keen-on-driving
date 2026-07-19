@@ -11,7 +11,7 @@ blocks:
     content: |
       # Prices
 
-      All lessons are 1.5 hours or 2 hours long. Save money with block bookings — the more hours you book, the less you pay per hour.
+      All lessons are 2 hours long. Save money with block bookings — the more hours you book, the less you pay per hour.
   - type: features
     intro_content: "## Individual Lessons"
     items:
@@ -29,7 +29,7 @@ blocks:
     intro_content: |
       ## Block Bookings
 
-      Commit to a block of hours and pay less per hour. Choose between 1.5 hours or 2 hour driving lessons
+      Commit to a block of hours and pay less per hour. All lessons are booked in 2-hour sessions.
     items:
       - icon: hugeicons:time-02
         name: 10 Hours
@@ -54,8 +54,6 @@ blocks:
     items:
       - value: £35
         label: Per Hour From
-      - value: 1.5hr
-        label: "Lesson Length "
       - value: 2hr
         label: Lesson Length
       - value: 40hr

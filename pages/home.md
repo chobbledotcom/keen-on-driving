@@ -48,8 +48,6 @@ blocks:
           book, the less you pay per hour.
   - type: stats
     items:
-      - value: 1.5hr
-        label: Lesson Length
       - value: 2hr
         label: Lesson Length
       - value: BB4
