@@ -45,6 +45,12 @@ blocks:
 
       Exceptions can be made to both the test centre used and the time of the test, but this must be discussed with your instructor.
 
+  - type: markdown
+    content: |
+      ## More about each area
+
+      Each town Daniel teaches in has its own page with more detail about what lessons there involve: [Rawtenstall](/locations/rawtenstall/), [Crawshawbooth](/locations/crawshawbooth/), [Waterfoot](/locations/waterfoot/), [Haslingden](/locations/haslingden/) and [Helmshore](/locations/helmshore/).
+
   - type: cta
     content: |
       ## Book Your First Lesson
