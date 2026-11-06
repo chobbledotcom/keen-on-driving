@@ -42,6 +42,12 @@ blocks:
   - type: markdown
     content: |
       If Haslingden is not your nearest town, Daniel also teaches in [Rawtenstall](/locations/rawtenstall/), [Crawshawbooth](/locations/crawshawbooth/), [Waterfoot](/locations/waterfoot/) and [Helmshore](/locations/helmshore/).
+  - type: markdown
+    content: |
+      ## What pupils say
+
+      Kevin Millar left a Google review after his son Albert passed first time. He wrote that other instructors had cancelled lessons and tried to charge for them, but "Keen On Driving came up to the farm, never canceled and was honest with their invoices". The full review is on the [reviews page](/reviews/).
+  - type: faqs
   - type: cta
     content: |
       ## Book Your First Lesson

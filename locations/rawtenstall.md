@@ -42,6 +42,14 @@ blocks:
   - type: markdown
     content: |
       Daniel also teaches in [Crawshawbooth](/locations/crawshawbooth/), [Waterfoot](/locations/waterfoot/), [Haslingden](/locations/haslingden/) and [Helmshore](/locations/helmshore/).
+  - type: markdown
+    content: |
+      ## What a Rawtenstall pupil said
+
+      Eddie Bryant left this Google review after passing first time: "I had minimal past driving experience before starting with Daniel back in May, and in the short 3 month period between then and my test date Daniel taught me several advanced driving skills as well as a strong understanding of the fundamentals which prepared me to pass first time."
+
+      There are more reviews on the [reviews page](/reviews/).
+  - type: faqs
   - type: cta
     content: |
       ## Book Your First Lesson

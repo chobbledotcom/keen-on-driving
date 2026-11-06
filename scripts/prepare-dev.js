@@ -42,6 +42,8 @@ export const prep = () => {
   }
 
   find.deleteByExt(dev, ".md");
+  // Rebuild src from scratch so deleted content files stop being rendered.
+  fs.rm(join(dev, "src"));
   mergeTemplateAndSource(template, root, dev, {
     delete: true,
     templateExcludes,

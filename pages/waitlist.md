@@ -7,24 +7,24 @@ meta_description:
 permalink: /waitlist/
 eleventyNavigation:
   key: Waitlist
-  order: 7
+  order: 9
 blocks:
   - type: hero
     content: |
       # Join the Waitlist
 
-      Spaces for driving lessons are limited and fill up quickly. Join the waitlist to be first in line when a slot becomes available. Pop your details in below and we'll be in touch as soon as we can fit you in.
+      Spaces for driving lessons are limited and fill up quickly. Join the waitlist to be first in line when a slot becomes available. Pop your details in below and Daniel will be in touch as soon as he can fit you in.
   - type: split-html
     content: >-
       ## Reserve Your Place
 
 
-      Demand for lessons is high, so there may be a short wait before we can get
-      you started. Joining the waitlist is the best way to make sure you don't
-      miss out.
+      Demand for lessons is high, so there may be a short wait before Daniel can
+      get you started. Joining the waitlist is the best way to make sure you
+      don't miss out.
 
 
-      Once a space opens up, we'll contact you to arrange your first lesson.
+      Once a space opens up, Daniel will contact you to arrange your first lesson.
     figure_html: >-
       <iframe
       src="https://www.totaldrive.app/a/waiting_widget.php?17662331294612"

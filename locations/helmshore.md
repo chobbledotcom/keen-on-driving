@@ -29,7 +29,7 @@ blocks:
     content: |
       ## Nervous pupils are welcome
 
-      Daniel has experience teaching pupils with severe anxiety, ADHD and autism, as well as pupils who needed a while before they were willing to sit in the driver's seat at all. One of his former pupils, Ella, put it this way after passing: he "took me from an extremely anxious person to a confident driver". If nerves are the reason you have put off learning so far, you would be in familiar company here.
+      Daniel has experience teaching pupils with severe anxiety, ADHD and autism, as well as pupils who needed a while before they were willing to sit in the driver's seat at all. One of his former pupils, Ella, put it this way after passing: he "took me from an extremely anxious person to a confident driver". If nerves are the reason you have put off learning so far, you would be in familiar company here. Her full review is on the [reviews page](/reviews/).
   - type: markdown
     content: |
       ## Then the test
@@ -42,6 +42,7 @@ blocks:
   - type: markdown
     content: |
       Daniel also teaches in [Rawtenstall](/locations/rawtenstall/), [Crawshawbooth](/locations/crawshawbooth/), [Waterfoot](/locations/waterfoot/) and [Haslingden](/locations/haslingden/).
+  - type: faqs
   - type: cta
     content: |
       ## Book Your First Lesson

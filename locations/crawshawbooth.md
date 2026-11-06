@@ -38,10 +38,16 @@ blocks:
 
       ## What lessons cost
 
-      A starter lesson costs £70 for two hours, and after that a standard two-hour lesson is £80. Block bookings bring the hourly rate down: £38 for 10 hours, £37 for 20, £36 for 30 and £35 for 40. There is more detail on the [prices page](/prices/), and we are happy to talk through which block might suit you.
+      A starter lesson costs £70 for two hours, and after that a standard two-hour lesson is £80. Block bookings bring the hourly rate down: £38 for 10 hours, £37 for 20, £36 for 30 and £35 for 40. There is more detail on the [prices page](/prices/), and Daniel is happy to talk through which block might suit you.
   - type: markdown
     content: |
       Lessons are also available in [Rawtenstall](/locations/rawtenstall/), [Waterfoot](/locations/waterfoot/), [Haslingden](/locations/haslingden/) and [Helmshore](/locations/helmshore/).
+  - type: markdown
+    content: |
+      ## What pupils say
+
+      Chris Beardsworth booked the 40-hour beginners package and passed first time with two driver faults. He said Daniel "manages to break things down into manageable and simplified steps in order to progress at your pace". The full review is on the [reviews page](/reviews/).
+  - type: faqs
   - type: cta
     content: |
       ## Book Your First Lesson

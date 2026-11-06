@@ -16,6 +16,7 @@ export const templateExcludes = [
 
 export const sourceExcludes = [
   ".*",
+  "_site",
   "*.nix",
   "README.md",
   "scripts",

@@ -1,0 +1,23 @@
+{%- comment -%}
+  Review totals, straight from reviews/*.md via reviewSummary.js.
+
+  Usage: {% include "reviews-summary.html" %}
+{%- endcomment -%}
+{%- if reviewSummary and reviewSummary.total > 0 %}
+<div class="review-summary">
+  <div class="review-summary__score">
+    <strong>{{ reviewSummary.average }}</strong>
+    <span class="review-summary__stars" aria-hidden="true">★★★★★</span>
+    <span class="review-summary__label">average rating</span>
+  </div>
+  <div class="review-summary__facts">
+    <p><strong>{{ reviewSummary.googleCount }} Google reviews</strong>{% if reviewSummary.googleCount > 0 %} and {{ reviewSummary.facebookCount }} Facebook recommendations{% endif %}, from pupils across Rossendale.</p>
+    {%- if googleReviews and googleReviews.rating and googleReviews.review_count %}
+      <p class="review-summary__note">Google currently shows {{ googleReviews.rating_display | default: googleReviews.rating }} from {{ googleReviews.review_count }} reviews. Every review is copied from the source - no edited testimonials.</p>
+    {%- else %}
+      <p class="review-summary__note">Every review is copied from the source - no edited testimonials.</p>
+    {%- endif %}
+  </div>
+  <a class="btn btn--secondary" href="/reviews/">Read all reviews</a>
+</div>
+{%- endif %}

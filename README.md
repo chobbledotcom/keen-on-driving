@@ -39,3 +39,12 @@ Set these GitHub secrets for your repo:
 ## Local Development
 
 Run `./bin/build` to build locally. The output appears in `result/`.
+
+## Reviews and Facebook posts
+
+Two Apify-backed scripts keep the social proof up to date:
+
+- `bun run fetch-google-reviews` fetches every Google review for the place ID in `_data/site.json`, writes one markdown file per review to `reviews/`, and updates `_data/googleReviews.json` with the current rating and count. Re-runs are incremental.
+- `bun run fetch-facebook-posts` fetches the Facebook page's posts, writes one JSON record per post to `facebook-posts/`, and downloads the images to `images/facebook-posts/`. Re-runs only fetch posts newer than the newest saved one.
+
+Both need `APIFY_API_TOKEN` in `.env` locally, or as a GitHub Actions secret. The workflows in `.github/workflows/` run them on a schedule and commit whatever changed.

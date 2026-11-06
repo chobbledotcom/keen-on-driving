@@ -22,6 +22,7 @@
               "update-pages"
               "update-scripts"
               "fetch-google-reviews"
+              "fetch-facebook-posts"
               "clean"
               "test"
             ];
@@ -50,6 +51,7 @@
                update-pages         - Update pages
                update-scripts       - Update chobble-client scripts
                fetch-google-reviews - Fetch Google Maps reviews
+               fetch-facebook-posts - Fetch Facebook page posts
                clean                - Clean build directory
                test                 - Run tests
 

@@ -1,21 +1,23 @@
 ---
 name: Contact
 meta_title: Contact | Keen On Driving
-meta_description: Get in touch with Keen On Driving to book driving lessons in Rossendale. Contact Daniel Keenan for manual driving instruction.
+meta_description: Contact Daniel Keenan at Keen On Driving to book manual driving lessons in Rossendale. Call, WhatsApp or send a message about lesson availability.
 eleventyNavigation:
   key: Contact
-  order: 6
+  order: 8
 blocks:
   - type: contact-form
     content: |
       # Contact Keen On Driving
 
-      Use the form to get in touch with Daniel about booking lessons, asking questions, or anything else.
+      Use the form to ask about lessons, availability or anything else. It helps if you mention where you live, whether you have driven before, and roughly when you would like to start.
 
-      Keen On Driving covers **Rossendale and the BB4 postcodes** including Rawtenstall, Crawshawbooth, Waterfoot, Haslingden, and Helmshore.
+      Keen On Driving covers **Rossendale and the BB4 postcodes**, including Rawtenstall, Crawshawbooth, Waterfoot, Haslingden and Helmshore.
   - type: icon-links
     intro_content: |
       ### Get in touch
+
+      Daniel is the only instructor, so messages go straight to him. Call or WhatsApp is usually quickest.
     items:
       - icon: "hugeicons:call"
         text: "07961 118 294"

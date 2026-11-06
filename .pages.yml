@@ -96,6 +96,10 @@ content:
       - { name: name, type: string, label: Name }
       - { name: url, type: string, label: URL }
       - { name: rating, type: number, label: Rating }
+      - { name: date, type: date, label: Date }
+      - { name: source, type: string, label: Source }
+      - { name: review_id, type: string, label: Review ID }
+      - { name: owner_response, type: string, label: Owner Response }
       - { name: thumbnail, type: image, label: Reviewer Photo }
       - { name: body, type: rich-text, label: Body }
       - name: faqs

@@ -29,7 +29,7 @@ blocks:
     content: |
       ## Covering the whole BB4 area
 
-      Waterfoot and its neighbouring villages sit inside the BB4 postcode area, which Daniel covers in full. If you live just outside the places named on this page, ask anyway - the valley is not big, and we would rather say yes than leave you guessing.
+      Waterfoot and its neighbouring villages sit inside the BB4 postcode area, which Daniel covers in full. If you live just outside the places named on this page, ask anyway - the valley is not big, and Daniel would rather say yes than leave you guessing.
   - type: markdown
     content: |
       ## Taking your test
@@ -43,6 +43,12 @@ blocks:
   - type: markdown
     content: |
       Daniel teaches throughout the valley, so you can also read about lessons in [Rawtenstall](/locations/rawtenstall/), [Crawshawbooth](/locations/crawshawbooth/), [Haslingden](/locations/haslingden/) and [Helmshore](/locations/helmshore/).
+  - type: markdown
+    content: |
+      ## What pupils say
+
+      Jess Leigh wrote in her Google review that Daniel "never made me feel rushed or under pressure", and that his encouragement helped her build confidence behind the wheel. Emily Howatson said he "doesn't rush you into new situations if you aren't comfortable". Both are on the [reviews page](/reviews/).
+  - type: faqs
   - type: cta
     content: |
       ## Book Your First Lesson

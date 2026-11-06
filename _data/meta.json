@@ -23,6 +23,16 @@
 				"areaServed": "GB",
 				"availableLanguage": ["English"]
 			}
+		],
+		"areaServed": {
+			"@type": "AdministrativeArea",
+			"name": "Rossendale, Lancashire"
+		},
+		"sameAs": [
+			"https://www.facebook.com/people/Keen-On-Driving/61580103030353/",
+			"https://www.google.com/maps/place/?q=place_id:ChIJi9QLojSkn4QR0rUxIVChsEU",
+			"https://www.yell.com/biz/keen-on-driving-rossendale-11019075/",
+			"https://www.drivewith.co.uk/driving-instructors/keen-on-driving"
 		]
 	}
 }

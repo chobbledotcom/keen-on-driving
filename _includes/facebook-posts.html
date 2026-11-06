@@ -1,0 +1,52 @@
+{%- comment -%}
+  Facebook posts as cards.
+
+  Parameters:
+    limit       - how many posts to show (default 6)
+    passes_only - true to show only pass announcements
+    heading     - section heading (default depends on passes_only)
+    intro       - optional intro paragraph
+
+  Data comes from facebookPosts (see _data/facebookPosts.js).
+{%- endcomment -%}
+{%- assign post_limit = limit | default: 6 -%}
+{%- if passes_only -%}
+  {%- assign post_items = facebookPosts.passes -%}
+  {%- assign post_heading = heading | default: "Recent passes" -%}
+  {%- assign post_intro = intro | default: "These are the named pupils and their test results, taken from the Keen On Driving Facebook page." -%}
+{%- else -%}
+  {%- assign post_items = facebookPosts.posts -%}
+  {%- assign post_heading = heading | default: "From the Facebook page" -%}
+  {%- assign post_intro = intro | default: "Pass announcements, lesson availability and the odd local notice, copied from the page." -%}
+{%- endif -%}
+{%- if post_items.size > 0 %}
+<div class="fb-posts">
+  <div class="fb-posts__head">
+    <h2>{{ post_heading }}</h2>
+    <p>{{ post_intro }}</p>
+  </div>
+  <ul class="fb-posts__grid" role="list">
+    {%- for post in post_items limit: post_limit -%}
+      {%- if post.title != "" %}
+        <li class="fb-post">
+          {%- if post.thumbnail %}
+            <a class="fb-post__media" href="{{ post.url }}" rel="nofollow">
+              <img src="{{ post.thumbnail }}" alt="" width="640" height="480" loading="lazy">
+            </a>
+          {%- endif %}
+          <div class="fb-post__body">
+            <p class="fb-post__date">{{ post.date | date: "%d %b %Y" }}</p>
+            {%- if passes_only and post.pass %}
+              <h3 class="fb-post__title">{{ post.pass.pupil }}</h3>
+              <p class="fb-post__summary">{{ post.pass.summary }}</p>
+            {%- else %}
+              <p class="fb-post__text">{{ post.excerpt | escape }}</p>
+            {%- endif %}
+            <a class="fb-post__link" href="{{ post.url }}" rel="nofollow">View on Facebook</a>
+          </div>
+        </li>
+      {%- endif %}
+    {%- endfor %}
+  </ul>
+</div>
+{%- endif %}
