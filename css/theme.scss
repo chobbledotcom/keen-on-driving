@@ -491,31 +491,6 @@ body::before {
   border-top: 1px dashed var(--k-line);
 }
 
-.design-system .owner-response {
-  margin-top: 0.25rem;
-  padding: 0.75rem 0.9rem;
-  border-left: 3px solid var(--k-marigold);
-  border-radius: 0 var(--k-radius-sm) var(--k-radius-sm) 0;
-  background: var(--k-surface-alt);
-}
-
-.design-system .owner-response__label {
-  display: block;
-  margin-bottom: 0.25rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--k-petrol-deep);
-}
-
-.design-system .owner-response p {
-  margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.55;
-  color: var(--color-text-muted);
-}
-
 .design-system .reviews-grid .reviewer-avatar {
   border: 2px solid var(--k-surface);
   box-shadow: 0 0 0 1px var(--k-line);
