@@ -142,15 +142,8 @@ blocks:
   - type: include
     file: facebook-posts-recent.html
 
-  - type: markdown
-    content: |
-      ## What pupils say
-
-      Chris booked the 40-hour beginners package and passed first time with two driver faults. He said Daniel "manages to break things down into manageable and simplified steps in order to progress at your pace".
-
-      Jess Leigh wrote that Daniel "never made me feel rushed or under pressure", and that his encouragement helped her build confidence behind the wheel.
-
-      Both reviews are on the [reviews page](/reviews/), along with every other Google review and Facebook recommendation.
+  - type: include
+    file: reviews-quotes.html
 
   - type: faqs
 

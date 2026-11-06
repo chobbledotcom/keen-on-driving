@@ -11,6 +11,7 @@
 //   bun scripts/fetch-google-reviews.js --all       # full re-scrape
 //   bun scripts/fetch-google-reviews.js --limit=50
 
+import { unlinkSync } from "node:fs";
 import { join } from "node:path";
 import { exists, fs, loadEnv, path, readJson, write } from "./utils.js";
 
@@ -172,7 +173,12 @@ const readExisting = async () => {
     const field = (key) => {
       const line = match[1].match(new RegExp(`^${key}:\\s*(.+)$`, "m"));
       if (!line) return "";
-      return line[1].trim().replace(/^["']|["']$/g, "");
+      const raw = line[1].trim();
+      try {
+        const parsed = JSON.parse(raw);
+        if (typeof parsed !== "object") return String(parsed);
+      } catch {}
+      return raw.replace(/^["']|["']$/g, "");
     };
 
     const source = field("source") || (file.includes("-google-") ? "Google" : "");
@@ -182,27 +188,17 @@ const readExisting = async () => {
       name: field("name"),
       date: field("date") || file.match(/(\d{4}-\d{2}-\d{2})/)?.[1] || "",
       id: field("review_id"),
+      url: field("url"),
+      rating: Number(field("rating")) || 0,
+      response: field("owner_response"),
+      body: content.slice(match[0].length).trim(),
     });
   }
 
   return records;
 };
 
-const saveReview = async (review, existing) => {
-  const duplicate = existing.some(
-    (record) =>
-      record.source === "Google" &&
-      (review.id
-        ? record.id === review.id
-        : record.name === review.name && record.date === review.date),
-  );
-  if (duplicate) return false;
-
-  const filename = `${slugify(review.name)}-google-${review.date || "undated"}.md`;
-  const filepath = join(CONFIG.reviewsDir, filename);
-
-  if (await exists(filepath)) return false;
-
+const renderReview = (review) => {
   const frontMatter = [
     "---",
     `name: ${yaml(review.name)}`,
@@ -212,10 +208,43 @@ const saveReview = async (review, existing) => {
     `source: Google`,
   ];
   if (review.id) frontMatter.push(`review_id: ${yaml(review.id)}`);
-  if (review.response) frontMatter.push(`owner_response: ${yaml(review.response)}`);
+  if (review.response) {
+    frontMatter.push(`owner_response: ${yaml(review.response)}`);
+  }
   frontMatter.push("---", "", review.text, "");
+  return frontMatter.join("\n");
+};
 
-  await write(filepath, frontMatter.join("\n"));
+const saveReview = async (review, existing) => {
+  const match = existing.find(
+    (record) =>
+      record.source === "Google" &&
+      (review.id
+        ? record.id === review.id
+        : record.name === review.name && record.date === review.date),
+  );
+
+  if (match) {
+    const unchanged =
+      match.body === review.text &&
+      match.rating === review.rating &&
+      match.url === review.url &&
+      (match.response || "") === (review.response || "");
+    if (unchanged) return false;
+
+    await write(join(CONFIG.reviewsDir, match.file), renderReview(review));
+    console.log(`Updated ${match.file} (${review.rating}/5 stars)`);
+    return true;
+  }
+
+  const filename = `${slugify(review.name)}-google-${review.date || "undated"}.md`;
+  const filepath = join(CONFIG.reviewsDir, filename);
+
+  // Don't clobber a file that has not been parsed into a record (for
+  // example, one with broken front matter); a human should look at it.
+  if (await exists(filepath)) return false;
+
+  await write(filepath, renderReview(review));
   console.log(`${filename} (${review.rating}/5 stars)`);
   return true;
 };
@@ -254,7 +283,7 @@ const main = async () => {
 
   fs.mkdir(CONFIG.reviewsDir);
 
-  const existing = forceAll ? [] : await readExisting();
+  const existing = await readExisting();
   const googleRecords = existing.filter((record) => record.source === "Google");
   const newest = googleRecords
     .map((record) => record.date)
@@ -304,10 +333,32 @@ const main = async () => {
     if (await saveReview(review, existing)) saved += 1;
   }
 
+  // A full scrape can also tell us a review has gone. Only reconcile when the
+  // actor's total matches what we received, so a partial run cannot wipe
+  // reviews. Files without a review id are left alone for a human to check.
+  const total = Number(place.reviewsCount);
+  if (forceAll && Number.isFinite(total) && total === unique.length) {
+    const seenIds = new Set(unique.map((review) => review.id).filter(Boolean));
+    let removed = 0;
+    for (const record of googleRecords) {
+      if (!record.id || seenIds.has(record.id)) continue;
+      try {
+        unlinkSync(join(CONFIG.reviewsDir, record.file));
+        removed += 1;
+      } catch (err) {
+        console.warn(`Could not remove ${record.file}: ${err.message}`);
+      }
+    }
+    if (removed) {
+      console.log(`Removed ${removed} review(s) no longer on the listing`);
+    }
+  }
+
   await saveSummary(place);
 
   console.log(
-    `\nSaved ${saved} new Google reviews (${unique.length - saved} already existed)`,
+    `\nSaved or updated ${saved} Google review file(s) ` +
+      `(${unique.length - saved} unchanged)`,
   );
 };
 

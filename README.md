@@ -42,9 +42,10 @@ Run `./bin/build` to build locally. The output appears in `result/`.
 
 ## Reviews and Facebook posts
 
-Two Apify-backed scripts keep the social proof up to date:
+Three Apify-backed scripts keep the social proof up to date:
 
-- `bun run fetch-google-reviews` fetches every Google review for the place ID in `_data/site.json`, writes one markdown file per review to `reviews/`, and updates `_data/googleReviews.json` with the current rating and count. Re-runs are incremental.
+- `bun run fetch-google-reviews` fetches every Google review for the place ID in `_data/site.json`, then creates or updates one markdown file per review in `reviews/` and writes the current rating and count to `_data/googleReviews.json`. `--all` also removes reviews that have gone from the listing.
 - `bun run fetch-facebook-posts` fetches the Facebook page's posts, writes one JSON record per post to `facebook-posts/`, and downloads the images to `images/facebook-posts/`. Re-runs only fetch posts newer than the newest saved one.
+- `bun run fetch-facebook-reviews` fetches Facebook recommendations and adds any new ones to `reviews/`.
 
-Both need `APIFY_API_TOKEN` in `.env` locally, or as a GitHub Actions secret. The workflows in `.github/workflows/` run them on a schedule and commit whatever changed.
+All three need `APIFY_API_TOKEN` in `.env` locally, or as a GitHub Actions secret. The combined `Fetch Reviews and Social Posts` workflow runs them weekly, commits whatever changed, and its completion triggers the build and deploy workflow, so the counts, quotes, reviews page and pass cards update without a manual push.

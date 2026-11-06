@@ -47,7 +47,7 @@ blocks:
     content: |
       ## Why the fault count matters
 
-      A pass is a pass, but the driver faults on the test result tell you something about the standard of driving on the day. Recent results include a faultless drive for Luke Oliver at Nelson in May 2026, one driver fault for Chloe in September, and two faults for Callum in October. Those results are published on the [Facebook page](https://www.facebook.com/people/Keen-On-Driving/61580103030353/) as they happen.
+      A pass is a pass, but the driver faults on the test result tell you something about the standard of driving on the day. The pass cards above are rebuilt from the [Facebook page](https://www.facebook.com/people/Keen-On-Driving/61580103030353/) whenever the fetcher runs, so the latest results appear without anyone editing this page.
 
   - type: cta
     content: |

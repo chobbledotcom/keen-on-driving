@@ -29,6 +29,7 @@ const reviews = readDataDir("reviews", ".md")
       rating: toNumber(scalar(frontmatter, "rating")),
       source,
       date,
+      body: raw.replace(/^---\n[\s\S]*?\n---\n?/, "").trim(),
     };
   })
   .filter(Boolean)
@@ -41,10 +42,17 @@ const average = ratings.length
   ? ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length
   : 0;
 
+// The newest five-star reviews long enough to quote on the home page. The
+// selection is recomputed on every build, so new reviews replace old ones.
+const featured = reviews
+  .filter((review) => review.rating === 5 && review.body.length >= 80)
+  .slice(0, 2);
+
 export default {
   reviews,
   google,
   facebook,
+  featured,
   total: reviews.length,
   googleCount: google.length,
   facebookCount: facebook.length,

@@ -3,6 +3,9 @@ name: Build and Deploy
 on:
   push:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Fetch Reviews and Social Posts"]
+    types: [completed]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -10,5 +13,6 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     uses: chobbledotcom/chobble-client/.github/workflows/shared-build-and-deploy.yml@main
     secrets: inherit

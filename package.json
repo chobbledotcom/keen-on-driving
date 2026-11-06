@@ -14,6 +14,7 @@
 		"update-pages": "bun scripts/update-pages.js",
 		"fetch-google-reviews": "bun scripts/fetch-google-reviews.js",
 		"fetch-facebook-posts": "bun scripts/fetch-facebook-posts.js",
+		"fetch-facebook-reviews": "bun scripts/fetch-facebook-reviews.js",
 		"screenshot": "bun scripts/screenshot.js",
 		"clean": "rm -rf .build _site",
 		"test": "bun scripts/test.js",

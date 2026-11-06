@@ -1,0 +1,18 @@
+{%- comment -%}
+  The two newest long five-star reviews, chosen by reviewSummary.js so the
+  home page updates itself when the fetchers add a review.
+{%- endcomment -%}
+{%- if reviewSummary.featured.size > 0 %}
+<div class="review-quotes">
+  <h2>What pupils say</h2>
+  {%- for review in reviewSummary.featured %}
+    <blockquote class="review-quote">
+      <p>“{{ review.body | truncate: 340 | escape }}”</p>
+      <footer>
+        <strong>{{ review.author }}</strong>
+        <span>{{ review.source }} review, {{ review.date | date: "%B %Y" }}</span>
+      </footer>
+    </blockquote>
+  {%- endfor %}
+</div>
+{%- endif %}
