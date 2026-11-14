@@ -13,6 +13,9 @@ concurrency:
 
 jobs:
   build:
+    permissions:
+      contents: read
+      deployments: write
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     uses: chobbledotcom/chobble-client/.github/workflows/shared-build-and-deploy.yml@main
     secrets: inherit
