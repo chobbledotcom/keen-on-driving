@@ -18,4 +18,6 @@ jobs:
       deployments: write
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     uses: chobbledotcom/chobble-client/.github/workflows/shared-build-and-deploy.yml@main
+    with:
+      template-ref: 9a3d6b3f400018c1589ef9a2bebf56fe930980ce # last v1 commit
     secrets: inherit
